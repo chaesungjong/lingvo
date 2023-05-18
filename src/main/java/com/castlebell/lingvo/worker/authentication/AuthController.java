@@ -1,5 +1,7 @@
 package com.castlebell.lingvo.worker.authentication;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,8 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AuthController {
        
     @RequestMapping(value = "/login", method=RequestMethod.GET)
-	public String home() {
+	public String login() {
 	    return "auth/login";
+	}
+
+	@RequestMapping(value="/loginProcess.do", method = {RequestMethod.POST})
+	public String loginProcess(Map<String, Object> requestData) {
+		
+	     return "redirect:/mobile/main";
 	}
 
 }

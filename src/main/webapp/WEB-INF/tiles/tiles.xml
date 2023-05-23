@@ -3,7 +3,7 @@
 <tiles-definitions>
 
 	<!-- Templates -->
-	<definition name="layout.basic" template="/WEB-INF/tiles/layout/basic.jsp">
+	<definition name="layout.basic" template="/WEB-INF/tiles/layout/base.jsp">
 		<put-attribute name="title"  value="Lingvo" />
 		<put-attribute name="header" value="/WEB-INF/tiles/view/header.jsp" />
 		<put-attribute name="body"   value="" />

@@ -13,4 +13,4 @@
 		<button class="btn btn-outline-primary btn-sm" type="submit" id="loginBtn"">로그인</button>
 	</form>
 </div>
-<script src="../mobile/auth/login.js"></script>
+<script src="../js/mobile/auth/login.js"></script>

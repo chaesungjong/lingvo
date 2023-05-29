@@ -33,14 +33,3 @@ out/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
-.vscode/
-src/main/resources/static/mobile/auth/login.js
-src/main/resources/static/index.html
-src/main/webapp/WEB-INF/tiles/view/mobile/main.jsp
-src/main/webapp/WEB-INF/tiles/view/mobile/auth/login.jsp
-src/main/java/com/castlebell/lingvo/worker/authentication/AuthController.java
-src/main/webapp/WEB-INF/tiles/view/mobile/main.jsp
-src/main/webapp/WEB-INF/tiles/view/mobile/auth/login.jsp
-src/main/java/com/castlebell/lingvo/worker/authentication/AuthController.java
-*.jsp

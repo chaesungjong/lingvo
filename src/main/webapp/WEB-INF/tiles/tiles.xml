@@ -3,22 +3,24 @@
 <tiles-definitions>
 
 	<!-- Templates -->
-	<definition name="layout.basic" template="/WEB-INF/tiles/layout/base.jsp">
+	<definition name="layout.basic" template="/WEB-INF/tiles/layout/mainLayout.jsp">
 		<put-attribute name="title"  value="Lingvo" />
-		<put-attribute name="header" value="/WEB-INF/tiles/view/header.jsp" />
+		<put-attribute name="header" value="" />
 		<put-attribute name="body"   value="" />
 		<put-attribute name="footer" value="" />
 	</definition>
 
 	<!-- 로그인 관련 페이지  -->	
-	<definition name="auth/*" extends="layout.basic">
-		<put-attribute name="body"   value="/WEB-INF/tiles/view/mobile/auth/{1}.jsp" />
+	<definition name="mmb/*" extends="layout.basic">
+		<put-attribute name="body"   value="/WEB-INF/tiles/view/mmb/{1}.jsp" />
 	</definition>
 	
 	<!-- 메인페이지 -->	
-	<definition name="mobile/*" extends="layout.basic">
-		<put-attribute name="body"   value="/WEB-INF/tiles/view/mobile/{1}.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/tiles/view//footer.jsp" />
+	<definition name="work/*" extends="layout.basic">
+	
+		<put-attribute name="header" value="/WEB-INF/tiles/view/cmm/header.jsp" />
+		<put-attribute name="body"   value="/WEB-INF/tiles/view/work/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/view/cmm/footer.jsp" />
 	</definition>
 	
 </tiles-definitions>

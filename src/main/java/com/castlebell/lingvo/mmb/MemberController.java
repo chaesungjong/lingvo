@@ -1,4 +1,4 @@
-package com.castlebell.lingvo.worker.authentication;
+package com.castlebell.lingvo.mmb;
 
 import java.util.Map;
 
@@ -10,18 +10,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 로그인 및 회원 가입 관련 컨트롤러
  */
 @Controller
-@RequestMapping("auth")
-public class AuthController {
+@RequestMapping("mmb")
+public class MemberController {
        
     @RequestMapping(value = "/login", method=RequestMethod.GET)
 	public String login() {
-	    return "auth/login";
+	    return "mmb/login";
 	}
 
 	@RequestMapping(value="/loginProcess.do", method = {RequestMethod.POST})
 	public String loginProcess(Map<String, Object> requestData) {
-		
-	     return "redirect:/mobile/main";
+	     return "redirect:/work/main";
 	}
 
 }

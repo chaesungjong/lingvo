@@ -7,3 +7,9 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+
+function CustomAlert(){
+  alert("준비중에 있습니다.");
+}
+

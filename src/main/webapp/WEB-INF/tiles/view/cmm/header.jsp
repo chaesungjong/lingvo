@@ -36,25 +36,29 @@
   background-color: #04AA6D;
   color: white;
 }
+
+.me-2 {
+    margin-right: 0.5rem!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="topnav">
-  <a href="#home" class="active">Lingvo</a>
+  <a href="/work/main" class="active"><span class="me-2"><img src="/image/lingvo.svg" ></span>Lingvo</a>
   <div id="myLinks">
-    <a href="#news">메인</a>
-    <a href="#contact" class="navitem">금일 작업 시작하기</a>
-    <a href="#about" class="navitem">나의 지난 작업</a>
-    <a href="#about" class="navitem">비상 연락망</a>
-    <a href="#about" class="navitem">위험 신고</a>
-    <a href="#about" class="navitem">이슈 게시판</a>
-    <a href="#about">고객센터</a>
-    <a href="#about" class="navitem">공지사항</a>
-    <a href="#about" class="navitem">FAQ</a>
-    <a href="#about" class="navitem">고객센터 전화 걸기</a>
-    <a href="#about">회원정보</a>
-    <a href="#about" class="navitem">회원정보 수정</a>
-    <a href="#about" class="navitem">생체 인증 로그인 설정</a>
-    <a href="#about">로그아웃</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();" >메인</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">금일 작업 시작하기</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">나의 지난 작업</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">비상 연락망</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">위험 신고</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">이슈 게시판</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();" >고객센터</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">공지사항</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">FAQ</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">고객센터 전화 걸기</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();" >회원정보</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">회원정보 수정</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">생체 인증 로그인 설정</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();" >로그아웃</a>
   </div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>

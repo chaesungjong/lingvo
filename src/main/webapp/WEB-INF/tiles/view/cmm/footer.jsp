@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <style>
 #navbar {
   overflow: hidden;
@@ -25,10 +27,27 @@
 .sticky + .content {
   padding-top: 60px;
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 </style>
-<nav id="navbar" class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-  <a href="#home">홈</a>
-  <a href="#news">비상</a>
-  <a href="#contact">위험신고</a>
-  <a href="#contact">이슈</a>
+</style>
+
+
+<nav id="navbar" class="navbar fixed-bottom navbar-expand-sm navbar-dark">
+  <a href="/work/main" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">home</span></a>
+  <a href="javascript:void(0);" onclick="CustomAlert();" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">contact_page</span></a>
+  <a href="javascript:void(0);" onclick="CustomAlert();" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">photo_camera</span></a>
+  <a href="javascript:void(0);" onclick="CustomAlert();" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">warning</span></a>
 </nav>

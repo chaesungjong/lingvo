@@ -6,26 +6,27 @@
 				<div class="card-header card-header-custom">
 					<h4>Lingvo</h4>
 				</div>
-				<div class="card-body">
-					<div class="form-group">
-						<label for="email">아이디</label>
-						<input type="email" class="form-control" id="email" placeholder="아이디">
-					</div>
-					<div class="form-group">
-						<label for="password">Password</label>
-						<input type="password" class="form-control" id="password" placeholder="비밀번호">
-					</div>
-					<div class="row">
-						<div class="col">
-							<button class="btn btn-custom btn-block" id="loginBtn">로그인</button>
+				<form id="frmLogin" method="post">
+					<div class="card-body">
+						<div class="form-group">
+							<label for="userid">아이디</label>
+							<input type="email" class="form-control" id="userid" placeholder="아이디">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Password</label>
+							<input type="password" class="form-control" id="pwd" placeholder="비밀번호">
+						</div>
+						<div class="row">
+							<div class="col">
+								<button class="btn btn-custom btn-block" id="loginBtn">로그인</button>
+							</div>
+						</div>
+						<div class="text-center mt-3">
+							<a href="#" class="text-decoration-none">아이디 찾기</a> |
+							<a href="#" class="text-decoration-none">비밀번호 찾기</a> 
 						</div>
 					</div>
-					<div class="text-center mt-3">
-						<a href="#" class="text-decoration-none">아이디 찾기</a> |
-						<a href="#" class="text-decoration-none">비밀번호 찾기</a> |
-						<a href="#" class="text-decoration-none">회원 가입</a>
-					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>

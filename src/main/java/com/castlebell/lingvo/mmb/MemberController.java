@@ -1,7 +1,7 @@
 package com.castlebell.lingvo.mmb;
 
 import java.util.Map;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,15 +12,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("mmb")
 public class MemberController {
-       
+
+	@Autowired
+	private MemberService memberService;
+
+	/**
+	 * 로그인 화면
+	 * @return
+	 */
     @RequestMapping(value = "/login", method=RequestMethod.GET)
 	public String login() {
 	    return "mmb/login";
 	}
 
+	/*
+	 * 로그인 처리
+	 */
 	@RequestMapping(value="/loginProcess.do", method = {RequestMethod.POST})
 	public String loginProcess(Map<String, Object> requestData) {
-	     return "redirect:/work/main";
+		memberService.login(requestData);
+	    return "redirect:/work/main";
 	}
 
 }

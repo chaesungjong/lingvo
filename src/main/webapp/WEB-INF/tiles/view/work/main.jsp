@@ -13,15 +13,35 @@
     </div>
   </div>
 </div>
-<div class="col-sm-6 col-lg-4 mb-4">
-  <div class="card text-bg-primary text-center p-3" id="workStart">
-    <figure class="mb-0">
-      <p>작업 시작 하기</p>
-    </figure>
-    <figure class="mb-0">
-      <img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png" decoding="async" width="100" height="100" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/330px-QR_code_for_mobile_English_Wikipedia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/440px-QR_code_for_mobile_English_Wikipedia.svg.png 2x" data-file-width="296" data-file-height="296">
-    </figure>
-  </div>
+<div class="col-sm-6 col-lg-4 mb-4" id="workStart">
+  <a href="/work/workQRConfirm" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="mb-0">금일 작업 시작</h6>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-sm-6 col-lg-4 mb-4" id="workStart">
+  <a href="/work/requestStopWorkList" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <span class="material-symbols-outlined">contact_page</span>
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="mb-0">작업 중지 요청</h6>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-sm-6 col-lg-4 mb-4" id="workStart">
+  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <span class="material-symbols-outlined">warning</span>
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="mb-0">작업 후기</h6>
+      </div>
+    </div>
+  </a>
 </div>
 <div class="col-md-4">
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -102,3 +122,5 @@
 </div>
 <br><br>
 <script src="/js/work/main.js"></script>
+
+

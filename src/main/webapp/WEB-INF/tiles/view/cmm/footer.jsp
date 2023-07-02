@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
 <style>
 #navbar {
@@ -46,8 +46,7 @@
 
 
 <nav id="navbar" class="navbar fixed-bottom navbar-expand-sm navbar-dark">
-  <a href="/work/main" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">home</span></a>
-  <a href="javascript:void(0);" onclick="CustomAlert();" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">contact_page</span></a>
-  <a href="javascript:void(0);" onclick="CustomAlert();" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">photo_camera</span></a>
-  <a href="javascript:void(0);" onclick="CustomAlert();" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">warning</span></a>
+  <a href="/cs/emrContact"      class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">contact_page</span></a>
+  <a href="/work/main"          class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">home</span></a>
+  <a href="/cs/noticeBoard"     class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">warning</span></a>
 </nav>

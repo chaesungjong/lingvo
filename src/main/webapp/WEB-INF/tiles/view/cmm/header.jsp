@@ -46,11 +46,11 @@
   <a href="/work/main" class="active"><span class="me-2"><img src="/image/lingvo.svg" ></span>Lingvo</a>
   <div id="myLinks">
     <a href="javascript:void(0);" onclick="CustomAlert();" >메인</a>
-    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">금일 작업 시작하기</a>
-    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">나의 지난 작업</a>
-    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">비상 연락망</a>
-    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">위험 신고</a>
-    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">이슈 게시판</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">금일 작업 시작</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">작업 중지 요청</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">작업 후기</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">비상연락망</a>
+    <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">전달 사항</a>
     <a href="javascript:void(0);" onclick="CustomAlert();" >고객센터</a>
     <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">공지사항</a>
     <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">FAQ</a>

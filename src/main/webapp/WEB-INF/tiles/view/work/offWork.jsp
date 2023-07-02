@@ -9,7 +9,7 @@
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <p class="card-text">새로운 작업</p>
+                            <p class="card-text">사진 보관함</p>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <p class="card-text">어제와 동일한 작업</p>
+                            <p class="card-text">사진 찍기</p>
                         </div>
                     </div>
                 </div>
@@ -37,14 +37,18 @@
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <p class="card-text">돌발 작업</p>
+                            <p class="card-text">파일 선택</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-custom btn-block" id="next">확인</button>
             </div>
         </div>
     </div>
 </div>
-<script src="/js/work/workedList.js"></script>
 
 

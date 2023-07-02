@@ -1,6 +1,5 @@
 package com.castlebell.lingvo.work;
 
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,20 +7,120 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("work")
 public class WorkController {
-       
+
+    /**
+	 * 작업자 메인
+	 * @return
+	 */   
     @RequestMapping(value = "/main", method=RequestMethod.GET)
 	public String main() {
 	    return "work/main";
 	}
 
-	@RequestMapping(value = "/*", method=RequestMethod.GET)
-	public String design(HttpServletRequest httpRequest) {
-		String url = httpRequest.getRequestURI().toString().replace("http://localhost:8080/","");
-		url = url.replace("http://ngd2023.cafe24.com/","");
-		url = url.replace("/work/", "");
-		url = url.replace("/", "");
-	    return "work/"+url;
+	/**
+	 * QR인식완료
+	 * @return
+	 */   
+    @RequestMapping(value = "/workQRConfirm", method=RequestMethod.GET)
+	public String workQRConfirm() {
+	    return "work/workQRConfirm";
 	}
+
+	/**
+	 * 안전점검 단계별 매뉴얼노출
+	 * @return
+	 */   
+    @RequestMapping(value = "/workCheckStep", method=RequestMethod.GET)
+	public String workCheckStep() {
+	    return "work/workCheckStep";
+	}
+
+	/**
+	 * 안전점검 매뉴얼 완료/결과전송확인
+	 * @return
+	 */   
+    @RequestMapping(value = "/workCheckStepConfirm", method=RequestMethod.GET)
+	public String workCheckStepConfirm() {
+	    return "work/workCheckStepConfirm";
+	}
+
+
+	/**
+	 * 작업선택
+	 * @return
+	 */   
+    @RequestMapping(value = "/workChoice", method=RequestMethod.GET)
+	public String workChoice() {
+	    return "work/workChoice";
+	}
+
+
+	/**
+	 * 나의 지난작업
+	 * @return
+	 */   
+    @RequestMapping(value = "/workedList", method=RequestMethod.GET)
+	public String workedList() {
+	    return "work/workedList";
+	}
+
+	/**
+	 * 위험신고리스트
+	 * @return
+	 */   
+    @RequestMapping(value = "/requestStopWorkList", method=RequestMethod.GET)
+	public String requestStopWorkList() {
+	    return "work/requestStopWorkList";
+	}
+
+	/**
+	 * 작업장 시설물 및 환경적 문제
+	 * @return
+	 */   
+    @RequestMapping(value = "/environmentalissues", method=RequestMethod.GET)
+	public String environmentalissues() {
+	    return "work/environmentalissues";
+	}
+
+	/**
+	 * 작업 중지 요청 사진 올리기 화면 
+	 * @return
+	 */   
+    @RequestMapping(value = "/requestPicture", method=RequestMethod.GET)
+	public String requestPicture() {
+	    return "work/requestPicture";
+	}
+
+	
+	/**
+	 * 작업 중지 요청 사진 첨부 
+	 * @return
+	 */   
+    @RequestMapping(value = "/requestPicturePlus", method=RequestMethod.GET)
+	public String requestPicturePlus() {
+	    return "work/requestPicturePlus";
+	}
+
+	/**
+	 * 작업 중지 요청 사진 첨부 상세 내용
+	 * @return
+	 */   
+    @RequestMapping(value = "/requestPicturePlusDitail", method=RequestMethod.GET)
+	public String requestPicturePlusDitail() {
+	    return "work/requestPicturePlusDitail";
+	}
+
+	/**
+	 * 작업 중지 요청 완료
+	 * @return
+	 */   
+    @RequestMapping(value = "/requestPictureComfirm", method=RequestMethod.GET)
+	public String requestPictureComfirm() {
+	    return "work/requestPictureComfirm";
+	}
+
+
+	
 
 }
 

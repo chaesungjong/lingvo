@@ -2,13 +2,15 @@
 <div class="container mt-5">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">추락험이 있는 장소에 작업발판이 설치 되어 있어야 합니다.</h5>
+            <h5 class="card-title">반드시!!
+            <br>작업 전 일일안전예방활동 (TBM)을 실시합니다.
+            </h5>
         </div>
     </div>
     <br><br>
     <div class="row">
         <div class="col">
-            <button class="btn btn-custom btn-block" id="next">다음</button>
+            <button class="btn btn-custom btn-block" id="next">확인</button>
         </div>
     </div>
 </div>

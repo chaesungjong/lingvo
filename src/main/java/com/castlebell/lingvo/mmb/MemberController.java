@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("mmb")
 public class MemberController {
 
-	@Autowired
-	private MemberService memberService;
+
 
 	/**
 	 * 로그인 화면
@@ -30,7 +29,7 @@ public class MemberController {
 	 */
 	@RequestMapping(value="/loginProcess.do", method = {RequestMethod.POST})
 	public String loginProcess(Map<String, Object> requestData) {
-		memberService.login(requestData);
+
 	    return "redirect:/work/main";
 	}
 

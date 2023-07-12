@@ -119,6 +119,62 @@ public class WorkController {
 	    return "work/requestPictureComfirm";
 	}
 
+	/**
+	 * 작업 후기
+	 * @return
+	 */   
+    @RequestMapping(value = "/workReview", method=RequestMethod.GET)
+	public String workReview() {
+	    return "work/workReview";
+	}
+
+	/**
+	 * 작업 후기 체크
+	 * @return
+	 */   
+    @RequestMapping(value = "/checkWorkReview", method=RequestMethod.GET)
+	public String checkWorkReview() {
+	    return "work/checkWorkReview";
+	}
+
+
+
+	/**
+	 * 작업 후기 완료
+	 * @return
+	 */   
+    @RequestMapping(value = "/workReViewPictureComfirm", method=RequestMethod.GET)
+	public String workReViewPictureComfirm() {
+	    return "work/workReViewPictureComfirm";
+	}
+
+	/**
+	 * 작업 완료
+	 * @return
+	 */   
+    @RequestMapping(value = "/workReviewEnd", method=RequestMethod.GET)
+	public String workReviewEnd() {
+	    return "work/workReviewEnd";
+	}
+
+		/**
+	 * 작업 후기 개선 사항 요청 
+	 * @return
+	 */   
+    @RequestMapping(value = "/workReviewissues", method=RequestMethod.GET)
+	public String workReviewissues() {
+	    return "work/workReviewissues";
+	}
+
+
+	/**
+	 * 작업 후기 개선 사항 요청 
+	 * @return
+	 */   
+    @RequestMapping(value = "/workImprovementReview", method=RequestMethod.GET)
+	public String workImprovementReview() {
+	    return "work/workImprovementReview";
+	}
 
 	
 

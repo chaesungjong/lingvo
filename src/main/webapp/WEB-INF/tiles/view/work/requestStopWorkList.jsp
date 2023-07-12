@@ -59,5 +59,9 @@
         </div>
     </div>
 </div>
-
+<script>
+    $(".col-md-4").click(function() {
+        location.href = "/work/environmentalissues";
+    });
+</script>
 

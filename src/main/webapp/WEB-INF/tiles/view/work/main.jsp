@@ -34,7 +34,7 @@
   </a>
 </div>
 <div class="col-sm-6 col-lg-4 mb-4" id="workStart">
-  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <a href="/work/workReview" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
     <span class="material-symbols-outlined">warning</span>
     <div class="d-flex gap-2 w-100 justify-content-between">
       <div>

@@ -1,4 +1,3 @@
-
 /**
  * api 통신 공통 함수
  * @param {API 주소}  url 
@@ -6,8 +5,8 @@
  * @param {성공 콜백} successCallback 
  * @param {실패 콜백} errorCallback 
  */
-
 function ajaxRequest(url, data, successCallback, errorCallback) {
+
     $.ajax({
       url: url,
       method: "GET",
@@ -16,22 +15,66 @@ function ajaxRequest(url, data, successCallback, errorCallback) {
       success: successCallback,
       error: errorCallback
     });
+
   }
-  
 /**
- * //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
- * 위도 경도를 통하여 날씨 정보 가져오기 
- * @param   {위도} lat
- * @param   {경도} lon
- * @param   {성공 콜백} successCallback 
- * @param   {실패 콜백} errorCallback 
+ * 현재 위치의 위도 경도를 확인하여 날씨 정보 가져오기
  */
-function weatherInformation(lat, lon,successCallback, errorCallback){
-   
-    ajaxRequest(
-        "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=f6fa61e6765ddf15ab5fc2c22b062493",
-        null,
-        successCallback,
-        errorCallback
-      );
+function getLocation(successCallback) {
+  if (navigator.geolocation) { 
+    navigator.geolocation.getCurrentPosition(function(position) {
+      weatherInformation(position.coords.latitude,position.coords.longitude,successCallback);
+    }, function(error) {
+      console.error(error);
+    }, {
+      enableHighAccuracy: false,
+      maximumAge: 0,
+      timeout: Infinity
+    });
+  } else {
+    alert('GPS를 지원하지 않습니다');
+  }
+}
+
+/**
+ * 위도 경도를 통하여 날씨 정보 가져오기 
+ * @param   {위도}        latitude
+ * @param   {경도}        longitude
+ * @param   {성공 콜백}    successCallback 
+ */
+function weatherInformation(latitude, longitude, successCallback){
+
+  var apiKey = "jJfUotrchvpyXABHlFPVuoHKuexVcER5";
+  var locationUrl = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${apiKey}&q=${latitude},${longitude}&language=ko-kr&toplevel=true`;
+
+  $.getJSON(locationUrl, function(locationResponse) {
+
+    //지역 키, 지역 이름
+    var locationKey = locationResponse.Key;
+    var regionName = locationResponse.LocalizedName;
+
+    var currentConditionsUrl = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${apiKey}&language=ko-kr&toplevel=true`;
+    var forecastUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${apiKey}&language=ko-kr&toplevel=true&metric=true`;
+
+    $.getJSON(currentConditionsUrl, function(currentConditionsResponse) {
+
+
+      $.getJSON(forecastUrl, function(forecastResponse) {
+        
+        //오늘의 최고 온도, 최저 온도
+        var today = forecastResponse.DailyForecasts[0];
+        var date = new Object();
+        date.regionName = regionName;
+        date.today = forecastResponse.DailyForecasts[0];
+        date.currentTemperature = currentConditionsResponse[0].Temperature.Metric.Value;
+        date.todayHighTemperature = today.Temperature.Maximum.Value;
+        date.todayLowTemperature = today.Temperature.Minimum.Value;
+        date.todayIconPhrase = forecastResponse.DailyForecasts[0].Day.IconPhrase;
+        date.MobileLink = forecastResponse.Headline.MobileLink;
+
+        successCallback(date);
+
+      });
+    });
+  });
 }

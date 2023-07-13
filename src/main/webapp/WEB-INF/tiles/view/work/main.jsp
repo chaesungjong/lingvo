@@ -2,14 +2,14 @@
 <!-- Body -->
 <div class="my-3 p-3 bg-body rounded shadow-sm">
   <h6 class="border-bottom pb-2 mb-0">홍길동님 환영합니다.</h6>
-  <div class="d-flex text-muted pt-2">
+  <div class="d-flex text-muted pt-2" id="detailLink">
     <img src="/image/123.png" width="32" height="32"  class="bd-placeholder-img flex-shrink-0 me-2 rounded" >
    <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
       <div class="d-flex justify-content-between">
-        <strong class="text-gray-dark">현재 날씨 : 흐림</strong>
-        <a href="#">서울특별시 </a>
+        <strong class="text-gray-dark" id="todayIconPhrase">현재 날씨 : 흐림</strong>
+        <a href="#" id="regionName">서울특별시 </a>
       </div>
-      <span class="d-block">최고 :25도, 최저 20도, 현재 23도</span>
+      <span class="d-block" id="todayTemperature">최고 :25도, 최저 20도, 현재 23도</span>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-package com.castlebell.lingvo.mmb.layout;
+package com.castlebell.lingvo.mmb.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import com.castlebell.lingvo.mmb.service.MemberService;
@@ -43,7 +44,7 @@ public class MemberController {
 	 * 로그인 처리
 	 */
 	@RequestMapping(value="/loginProcess.do", method = {RequestMethod.POST})
-	public String loginProcess(HttpServletRequest request, Map<String, Object> model,HttpSession session) {
+	public String loginProcess(HttpServletRequest request, 	Model model ,HttpSession session) {
 
 		String userid     = request.getParameter("userid");		//아이디
 		String pwd        = request.getParameter("pwd");			//비밀번호
@@ -52,10 +53,11 @@ public class MemberController {
 		HashMap<String, Object> resultMap = new HashMap<String, Object>();
 
 		if(StringUtil.isNull(pwd) || StringUtil.isNull(userid)) {
-			model.put("msg", "아이디 또는 비밀번호를 입력해주세요.");
+			model.addAttribute("errMsg", "아이디 또는 비밀번호를 입력해주세요.");
 			return "mmb/login";
 		}
-		logger.info("사용자 로그인 처리 userid : " + userid + " pwd : " + pwd + " userIP : " + userIP + " clientType : " + clientType);
+
+		logger.debug("사용자 로그인 처리 userid : " + userid + " pwd : " + pwd + " userIP : " + userIP + " clientType : " + clientType);
 
 		resultMap = memberService.loginProcess(userid,pwd,userIP,clientType,session);
 
@@ -63,7 +65,7 @@ public class MemberController {
 
 		//로그인 실패
 		if(!"0".equals(retVal)){
-			model.put("errMsg", StringUtil.objectToString(resultMap.get("errMsg")));
+			model.addAttribute("errMsg", StringUtil.objectToString(resultMap.get("errMsg")));
 			return "mmb/login";
 		}
 

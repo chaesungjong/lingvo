@@ -1,8 +1,12 @@
 package com.castlebell.lingvo.repository;
 
 
-import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Mapper;
+
+import com.castlebell.lingvo.domain.LoginResult;
+import com.castlebell.lingvo.domain.Member;
 
 /**
  * 회원 정보 관련 매퍼
@@ -14,6 +18,12 @@ public interface MemberMapper {
      * 로그인 처리
      * @return
      */
-    HashMap<String, Object> memLogin(String userid, String userpw, String ip, String clienttype);
+    void memLogin(LoginResult param);
+
+    /**
+     * 로그인 정보 가져온다.
+     * @return
+     */
+    Member memUserInfo(Map<String, Object> params);
 
 }

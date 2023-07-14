@@ -7,11 +7,11 @@ public class Member implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String userid;
-    private String userKey;
+    private String userkey;
     private String pwd;
     private String name;
     private String hpno;
-    private String emergencyHpno;
+    private String emrHpno;
     private String bloodType;
     private String addr;
     private String foreignYn;
@@ -21,6 +21,8 @@ public class Member implements Serializable {
     private String requestTime;
     private String approvalTime;
     private String approvaladminId;
+    private Integer retVal;
+    private String errMsg;
 
     public String getUserid() {
         return userid;
@@ -30,12 +32,12 @@ public class Member implements Serializable {
         this.userid = userid;
     }
 
-    public String getuserKey() {
-        return userKey;
+    public String getuserkey() {
+        return userkey;
     }
 
-    public void setuserKey(String userKey) {
-        this.userKey = userKey;
+    public void setuserkey(String userkey) {
+        this.userkey = userkey;
     }
 
     public String getPwd() {
@@ -62,12 +64,12 @@ public class Member implements Serializable {
         this.hpno = hpno;
     }
 
-    public String getEmergencyHpno() {
-        return emergencyHpno;
+    public String getemrHpno() {
+        return emrHpno;
     }
 
-    public void setEmergencyHpno(String emergencyHpno) {
-        this.emergencyHpno = emergencyHpno;
+    public void setemrHpno(String emrHpno) {
+        this.emrHpno = emrHpno;
     }
 
     public String getBloodType() {
@@ -140,5 +142,42 @@ public class Member implements Serializable {
 
     public void setApprovaladminId(String approvaladminId) {
         this.approvaladminId = approvaladminId;
+    }
+
+    public Integer getRetVal() {
+        return retVal;
+    }
+
+    public void setRetVal(Integer retVal) {
+        this.retVal = retVal;
+    }
+
+    public String getErrMsg() {
+        return errMsg;
+    }
+
+    public void setErrMsg(String errMsg) {
+        this.errMsg = errMsg;
+    }
+    
+    @Override
+    public String toString() {
+        return "Member{" +
+                "userid='" + userid + '\'' +
+                ", userkey='" + userkey + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", name='" + name + '\'' +
+                ", hpno='" + hpno + '\'' +
+                ", emrHpno='" + emrHpno + '\'' +
+                ", bloodType='" + bloodType + '\'' +
+                ", addr='" + addr + '\'' +
+                ", foreignYn='" + foreignYn + '\'' +
+                ", idImgUrl='" + idImgUrl + '\'' +
+                ", state='" + state + '\'' +
+                ", grade='" + grade + '\'' +
+                ", requestTime='" + requestTime + '\'' +
+                ", approvalTime='" + approvalTime + '\'' +
+                ", approvaladminId='" + approvaladminId + '\'' +
+                '}';
     }
 }

@@ -4,26 +4,42 @@
 <mapper namespace="com.castlebell.lingvo.repository.MemberMapper">
 
   <!-- 로그인 시도 프로시저 Start -->
-  <resultMap id="LoginResultMap" type="java.util.HashMap">
-    <result property="userid"       column="userid" />
-    <result property="userpw"       column="userpw" />
-    <result property="ip"           column="ip" />
-    <result property="clienttype"   column="clienttype" />
-    <result property="retVal"       column="retVal" />
-    <result property="errMsg"       column="errMsg" />
-  </resultMap>
-
-  <select id="memLogin" resultMap="LoginResultMap">
-    {   call [dbo].[memLogin](
-            #{userid},
-            #{userpw},
-            #{ip},
-            #{clienttype},
-            @retVal = #{retVal, mode=OUT, jdbcType=INTEGER},
-            @errMsg = #{errMsg, mode=OUT, jdbcType=VARCHAR} 
-        ) 
-    }
+  <select id="memLogin" statementType="CALLABLE">
+    { #{retVal, mode=OUT, jdbcType=INTEGER} = call [dbo].[memLogin](#{userid}, #{userpw}, #{ip}, #{clienttype},  #{errMsg, mode=OUT, jdbcType=VARCHAR} ) }
   </select>
   <!-- 로그인 시도 프로시저 End -->
 
+
+  <resultMap id="MemberResultMap" type="com.castlebell.lingvo.domain.Member">
+    <result property="userid"           column="userid" />
+    <result property="userkey"          column="userkey" />
+    <result property="pwd"              column="pwd" />
+    <result property="name"             column="name" />
+    <result property="hpno"             column="hpno" />
+    <result property="emrHpno"          column="emrHpno" />
+    <result property="bloodType"        column="bloodType" />
+    <result property="foreignYn"        column="foreignYn" />
+    <result property="idImgUrl"         column="idImgUrl" />
+    <result property="state"            column="state" />
+    <result property="grade"            column="grade" />
+    <result property="requestTime"      column="requestTime" />
+    <result property="modifyTime"       column="modifyTime" />
+    <result property="modifyTime"       column="modifyTime" />
+    <result property="approvalTime"     column="approvalTime" />
+    <result property="approvaladminId"  column="approvaladminId" />
+  </resultMap>
+  <!-- 회원정보 가져오기 및 중복확인  프로시저 Start -->
+  <select id="memUserInfo" resultMap="MemberResultMap"  statementType="CALLABLE">
+        { call [dbo].[memUserInfo](
+            #{gubun},
+            #{userid},
+            #{ip},
+            #{userkey},
+            #{etcParam1},
+            #{etcParam2},
+            #{errMsg, mode=OUT, jdbcType=VARCHAR}
+        )
+    }
+  </select>
+  <!-- 회원정보 가져오기 및 중복확인 프로시저 End -->
 </mapper>

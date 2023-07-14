@@ -25,7 +25,7 @@ function getLocation(successCallback) {
     navigator.geolocation.getCurrentPosition(function(position) {
       weatherInformation(position.coords.latitude,position.coords.longitude,successCallback);
     }, function(error) {
-      console.error(error);
+      weatherInformation(37.5547,126.9706,successCallback);
     }, {
       enableHighAccuracy: false,
       maximumAge: 0,

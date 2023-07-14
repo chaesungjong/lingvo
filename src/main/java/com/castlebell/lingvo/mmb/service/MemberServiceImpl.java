@@ -1,12 +1,11 @@
 package com.castlebell.lingvo.mmb.service;
 
 import java.util.HashMap;
-
+import java.util.Map;
 import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.castlebell.lingvo.domain.LoginResult;
 import com.castlebell.lingvo.domain.Member;
 import com.castlebell.lingvo.repository.MemberMapper;
 import com.castlebell.lingvo.util.StringUtil;
@@ -16,64 +15,71 @@ public class MemberServiceImpl implements MemberService {
 
     private final MemberMapper MemberMapper;
 
-   @Autowired
+    @Autowired
     public MemberServiceImpl(MemberMapper memberMapper) {
         this.MemberMapper = memberMapper;
     }
 
+    /**
+     * 로그인 처리
+     */
     @Override
     public HashMap<String, Object> loginProcess(String userid, String userpw, String ip, String clienttype, HttpSession session) {
         
         HashMap<String, Object> result = new HashMap<String, Object>();
-        String retVal = "";
+        String retVal = "";        
+        String errMsg = "";
 
-        //로그인 처리
-        // result = MemberMapper.memLogin(userid, userpw, ip, clienttype);
+        result.put("userid",userid);
+        result.put("userpw",userpw);
+        result.put("ip",ip);
+        result.put("clienttype",clienttype);
 
-        // retVal = StringUtil.objectToString(result.get("retVal"));
+        LoginResult loginResult = new LoginResult();
+        loginResult.setUserid(userid);
+        loginResult.setUserpw(userpw);
+        loginResult.setIp(ip);
+        loginResult.setClienttype(clienttype);
 
+        try{
+            //로그인 처리
+            MemberMapper.memLogin(loginResult);
 
-        // //로그인 실패
-        // if(!"0".equals(retVal)) {
-        //     return result;
-        // }
+            retVal = StringUtil.objectToString(loginResult.getRetVal());
+            errMsg = StringUtil.objectToString(loginResult.getErrMsg());
+            result.put("retVal", retVal);
+            result.put("errMsg", errMsg);
 
-        Member member = new Member();
+            //로그인 실패
+            if(!"0".equals(retVal)) {
+                return result;
+            }
 
-        // member.setUserid(StringUtil.objectToString(result.get("userid")));
-        // member.setName(StringUtil.objectToString(result.get("name")));
-        // member.setHpno(StringUtil.objectToString(result.get("hpno")));
-        // member.setEmergencyHpno(StringUtil.objectToString(result.get("emergencyHpno")));
-        // member.setBloodType(StringUtil.objectToString(result.get("bloodType")));
-        // member.setAddr(StringUtil.objectToString(result.get("addr")));
-        // member.setForeignYn(StringUtil.objectToString(result.get("foreignYn")));
-        // member.setIdImgUrl(StringUtil.objectToString(result.get("idImgUrl")));
-        // member.setState(StringUtil.objectToString(result.get("state")));
-        // member.setGrade(StringUtil.objectToString(result.get("grade")));
-        // member.setRequestTime(StringUtil.objectToString(result.get("requestTime")));
-        // member.setApprovalTime(StringUtil.objectToString(result.get("approvalTime")));
-        // member.setApprovaladminId(StringUtil.objectToString(result.get("approvaladminId")));
+            //로그인 정보 가져오기
+            Map<String, Object> params = new HashMap<>();
+            params.put("gubun", "MEM_USERINFO");
+            params.put("userid", userid);
+            params.put("ip", ip);
+            params.put("userkey", ""); 
+            params.put("etcParam1", "");
+            params.put("etcParam2", "");
+            //로그인 처리
+            Member member = MemberMapper.memUserInfo(params);
 
+            if(member == null) {
+                result.put("retVal", "-1");
+                result.put("errMsg", "로그인 정보가 없습니다.");
+                return result;
+            }
 
-        if("test".equals(userid)){
-            member.setUserid("test");
-            member.setuserKey("10000003");
-            member.setName("홍길동");
-            member.setHpno("01011112222");
-            member.setEmergencyHpno("01033334444");
-            member.setBloodType("O");
-            member.setAddr("서울시 강남구 서초동 123번지");
-            member.setForeignYn("N");
-            member.setIdImgUrl("https://m.naver.com");
-            member.setState("Y");
-            member.setGrade("U1");
+            //로그인 성공
+            session.setAttribute("member", member);
+
+        }catch(Exception e){
+            e.printStackTrace();
+            result.put("retVal", "-1");
+            result.put("errMsg", "로그인 처리중 오류가 발생하였습니다.");
         }
-
-        session.setAttribute("member", member);
-
-
-        //로그인 성공
-        //회원정보를 가져와야 함.
 
         return result;
     }

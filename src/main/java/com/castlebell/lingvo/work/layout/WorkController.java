@@ -1,19 +1,38 @@
-package com.castlebell.lingvo.work;
+package com.castlebell.lingvo.work.layout;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import com.castlebell.lingvo.domain.Member;
 
 @Controller
 @RequestMapping("work")
 public class WorkController {
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(WorkController.class);
+	
     /**
 	 * 작업자 메인
 	 * @return
 	 */   
     @RequestMapping(value = "/main", method=RequestMethod.GET)
-	public String main() {
+	public String main(HttpServletRequest request, Model model ,HttpSession session) {
+
+		Member member = (Member) session.getAttribute("member");
+
+		if(member == null){
+			model.addAttribute("errMsg", "잘못 된 접근 입니다.");
+			return "mmb/login";
+		}
+
+		logger.debug("main 진입 : " + member.toString());
+		model.addAttribute("name", member.getName() + " 님 환영합니다.");
+
 	    return "work/main";
 	}
 

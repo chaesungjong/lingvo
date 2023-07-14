@@ -6,15 +6,15 @@
 				<div class="card-header card-header-custom">
 					<h4>Lingvo</h4>
 				</div>
-				<form id="frmLogin" method="post">
+				<form id="frmLogin" method="POST">
 					<div class="card-body">
 						<div class="form-group">
 							<label for="userid">아이디</label>
-							<input type="email" class="form-control" id="userid" placeholder="아이디">
+							<input class="form-control" id="userid" name="userid" placeholder="아이디">
 						</div>
 						<div class="form-group">
 							<label for="pwd">Password</label>
-							<input type="password" class="form-control" id="pwd" placeholder="비밀번호">
+							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="비밀번호">
 						</div>
 						<div class="row">
 							<div class="col">

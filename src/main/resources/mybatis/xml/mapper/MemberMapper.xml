@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.castlebell.lingvo.repository.MemberMapper">
+
+  <!-- 로그인 시도 프로시저 Start -->
+  <resultMap id="LoginResultMap" type="java.util.HashMap">
+    <result property="userid"       column="userid" />
+    <result property="userpw"       column="userpw" />
+    <result property="ip"           column="ip" />
+    <result property="clienttype"   column="clienttype" />
+    <result property="retVal"       column="retVal" />
+    <result property="errMsg"       column="errMsg" />
+  </resultMap>
+
+  <select id="memLogin" resultMap="LoginResultMap">
+    {   call [dbo].[memLogin](
+            #{userid},
+            #{userpw},
+            #{ip},
+            #{clienttype},
+            @retVal = #{retVal, mode=OUT, jdbcType=INTEGER},
+            @errMsg = #{errMsg, mode=OUT, jdbcType=VARCHAR} 
+        ) 
+    }
+  </select>
+  <!-- 로그인 시도 프로시저 End -->
+
+</mapper>

@@ -25,7 +25,12 @@ function getLocation(successCallback) {
     navigator.geolocation.getCurrentPosition(function(position) {
       weatherInformation(position.coords.latitude,position.coords.longitude,successCallback);
     }, function(error) {
-      weatherInformation(37.5547,126.9706,successCallback);
+      try{
+        window.HyBridApp.getLocation();
+      }
+      catch(e){
+
+      }
     }, {
       enableHighAccuracy: false,
       maximumAge: 0,
@@ -77,4 +82,16 @@ function weatherInformation(latitude, longitude, successCallback){
       });
     });
   });
+}
+
+/**
+ * QR 코드 스캔
+ */
+function openQRCode(url){
+  try{
+    window.HyBridApp.callQRCode(url);
+  }
+  catch(e){
+
+  }
 }

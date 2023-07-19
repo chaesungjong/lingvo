@@ -18,7 +18,7 @@
 						</div>
 						<div class="row">
 							<div class="col">
-								<button class="btn btn-custom btn-block" id="loginBtn">로그인</button>
+								<button type="button" class="btn btn-custom btn-block" id="loginBtn">로그인</button>
 							</div>
 						</div>
 						<div class="text-center mt-3">

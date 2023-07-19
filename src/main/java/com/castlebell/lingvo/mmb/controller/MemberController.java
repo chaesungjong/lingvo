@@ -1,7 +1,6 @@
 package com.castlebell.lingvo.mmb.controller;
 
 import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -68,7 +67,7 @@ public class MemberController {
 			model.addAttribute("errMsg", StringUtil.objectToString(resultMap.get("errMsg")));
 			return "mmb/login";
 		}
-
+		
 	    return "redirect:/work/main";
 		
 	}

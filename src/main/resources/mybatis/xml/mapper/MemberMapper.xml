@@ -10,7 +10,7 @@
   <!-- 로그인 시도 프로시저 End -->
 
 
-  <resultMap id="MemberResultMap" type="com.castlebell.lingvo.domain.Member">
+  <resultMap id="MemberResultMap" type="com.castlebell.lingvo.domain.dao.mmb.Member">
     <result property="userid"           column="userid" />
     <result property="userkey"          column="userkey" />
     <result property="pwd"              column="pwd" />

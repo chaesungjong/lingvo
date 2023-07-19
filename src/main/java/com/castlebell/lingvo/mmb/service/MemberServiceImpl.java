@@ -5,8 +5,9 @@ import java.util.Map;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.castlebell.lingvo.domain.LoginResult;
-import com.castlebell.lingvo.domain.Member;
+
+import com.castlebell.lingvo.domain.dao.mmb.LoginResult;
+import com.castlebell.lingvo.domain.dao.mmb.Member;
 import com.castlebell.lingvo.repository.MemberMapper;
 import com.castlebell.lingvo.util.StringUtil;
 

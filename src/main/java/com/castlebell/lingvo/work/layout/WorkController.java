@@ -4,18 +4,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import com.castlebell.lingvo.domain.Member;
+
+import com.castlebell.lingvo.cmm.CommonController;
+import com.castlebell.lingvo.domain.dao.mmb.Member;
+import com.castlebell.lingvo.work.service.WorkService;
 
 @Controller
 @RequestMapping("work")
-public class WorkController {
+public class WorkController extends CommonController{
 	
 	private static final Logger logger = LoggerFactory.getLogger(WorkController.class);
-	
+	private final WorkService workService;
+
+    @Autowired
+    public WorkController(WorkService workService) {
+        this.workService = workService;
+    }
+
     /**
 	 * 작업자 메인
 	 * @return
@@ -37,13 +47,20 @@ public class WorkController {
 	}
 
 	/**
-	 * QR인식완료
+	 * QRCode 인식 하여 현장 정보 가져오기 
 	 * @return
 	 */   
     @RequestMapping(value = "/workQRConfirm", method=RequestMethod.GET)
-	public String workQRConfirm() {
+	public String workQRConfirm(HttpServletRequest request, Model model ,HttpSession session) {
+		logger.debug("workQRConfirm 진입 ");
+		if(!checkLogin(session, model)){
+			return "redirect:/mmb/login";
+		}
+
+		workService.getSiteInfo(session, request);
 	    return "work/workQRConfirm";
 	}
+
 
 	/**
 	 * 안전점검 단계별 매뉴얼노출

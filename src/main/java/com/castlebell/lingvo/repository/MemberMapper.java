@@ -2,11 +2,10 @@ package com.castlebell.lingvo.repository;
 
 
 import java.util.Map;
-
 import org.apache.ibatis.annotations.Mapper;
 
-import com.castlebell.lingvo.domain.LoginResult;
-import com.castlebell.lingvo.domain.Member;
+import com.castlebell.lingvo.domain.dao.mmb.LoginResult;
+import com.castlebell.lingvo.domain.dao.mmb.Member;
 
 /**
  * 회원 정보 관련 매퍼

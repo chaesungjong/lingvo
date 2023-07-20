@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.castlebell.lingvo.repository.MemberMapper">
+<mapper namespace="com.castlebell.lingvo.repository.WorkMapper">
 
   <!-- 금일 작업시작하기, 예방활동체크 Start -->
   <resultMap id="workSafetyCheckMap" type="com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck">
@@ -18,13 +18,14 @@
         { call [dbo].[workSafetyCheck](
             #{gubun},
             #{userid},
-            #{qrCod},
+            #{qrCode},
             #{workGubun},
             #{workClass},
             #{state},
             #{ip},
             #{workSeq},
-            #{etcParam1}
+            #{etcParam1},
+            #{errMsg, mode=OUT, jdbcType=VARCHAR}
           )
         }
   </select>

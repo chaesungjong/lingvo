@@ -19,27 +19,23 @@
       <tbody>
         <tr>
             <th scope="row">위치</th>
-            <td>서울시 강남구</td>
+            <td>${siteAddress}</td>
         </tr>
         <tr>
             <th scope="row">현장</th>
-            <td>A아파트 신축</td>
-        </tr>
-        <tr>
-            <th scope="row">판매 위치</th>
-            <td>전기건설</td>
+            <td>${siteName}</td>
         </tr>
         <tr>
             <th scope="row">시공사</th>
-            <td>ABC전기</td>
+            <td>${constName}</td>
         </tr>
         <tr>
-            <th scope="row">시행사</th>
-            <td>AAA건설</td>
+            <th scope="row">소속회사</th>
+            <td>${companyName}</td>
         </tr>
         <tr>
             <th scope="row">공종</th>
-            <td>전기</td>
+            <td>${workType}</td>
         </tr>
       </tbody>
   </table>

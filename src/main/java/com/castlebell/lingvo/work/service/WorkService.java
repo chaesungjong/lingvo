@@ -1,9 +1,8 @@
 package com.castlebell.lingvo.work.service;
 
-import java.util.HashMap;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
 
 public interface WorkService {
 
@@ -14,6 +13,6 @@ public interface WorkService {
      * @param request
      * @return
      */
-    HashMap<String, Object> getSiteInfo(HttpSession session, HttpServletRequest request);
+    WorkSafetyCheck getSiteInfo(HttpSession session, HttpServletRequest request);
     
 }

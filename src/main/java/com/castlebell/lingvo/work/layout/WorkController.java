@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.castlebell.lingvo.cmm.CommonController;
 import com.castlebell.lingvo.domain.dao.mmb.Member;
+import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
 import com.castlebell.lingvo.work.service.WorkService;
 
 @Controller
@@ -57,7 +58,23 @@ public class WorkController extends CommonController{
 			return "redirect:/mmb/login";
 		}
 
-		workService.getSiteInfo(session, request);
+		WorkSafetyCheck result = workService.getSiteInfo(session, request);
+
+		result.getErrCode();
+
+		if(!"0".equals(result.getErrCode())){
+			model.addAttribute("errMsg", result.getErrMsg());
+			return "redirect:/work/main";
+		}
+
+		model.addAttribute("siteAddress", result.getSiteAddress());	//위치
+		model.addAttribute("siteName", result.getSiteName());			//현장	
+		model.addAttribute("constName", result.getConstName());	 	//시공사
+		model.addAttribute("companyName", result.getCompanyName());	//시공사
+		model.addAttribute("workType", result.getWorkType());			//작업구분
+
+		session.setAttribute("workSeq", result.getWorkSeq());
+
 	    return "work/workQRConfirm";
 	}
 

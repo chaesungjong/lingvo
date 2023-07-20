@@ -1,7 +1,5 @@
 package com.castlebell.lingvo.repository;
 
-
-import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
 
@@ -16,5 +14,5 @@ public interface WorkMapper {
      * 금일 작업시작하기
      * @return
      */
-    WorkSafetyCheck workSafetyCheck(Map<String, Object> param);
+    WorkSafetyCheck workSafetyCheck(WorkSafetyCheck workSafetyCheck);
 }

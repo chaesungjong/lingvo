@@ -31,11 +31,6 @@ public class MemberServiceImpl implements MemberService {
         String retVal = "";        
         String errMsg = "";
 
-        result.put("userid",userid);
-        result.put("userpw",userpw);
-        result.put("ip",ip);
-        result.put("clienttype",clienttype);
-
         LoginResult loginResult = new LoginResult();
         loginResult.setUserid(userid);
         loginResult.setUserpw(userpw);

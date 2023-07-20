@@ -25,40 +25,27 @@ public class WorkServiceImpl implements WorkService{
 
 
     @Override
-    public HashMap<String, Object> getSiteInfo(HttpSession session, HttpServletRequest request) {
+    public WorkSafetyCheck getSiteInfo(HttpSession session, HttpServletRequest request) {
 
-        HashMap<String, Object> requestHashMap = new HashMap<String, Object>();
         Member member = (Member) session.getAttribute("member");
 
         String qrCode = request.getParameter("qrCode");
         String userid = member.getUserid();
         String ip = request.getRemoteAddr();
-        String workSql = request.getParameter("workSql");
 
-        requestHashMap.put("gubun", "QR_CHECKIN");
-        requestHashMap.put("userid", userid);
-        requestHashMap.put("qrCode", qrCode);
-        requestHashMap.put("workGubun", "");
-        requestHashMap.put("workClass", "");
-        requestHashMap.put("state", "");
-        requestHashMap.put("ip", ip);
-        requestHashMap.put("workSql", "0");
-        requestHashMap.put("etcParam1", "");
+        WorkSafetyCheck workSafetyCheck = new WorkSafetyCheck();
+        workSafetyCheck.setGubun("QR_CHECKIN");
+        workSafetyCheck.setUserid(userid);
+        workSafetyCheck.setQrCode(qrCode);
+        workSafetyCheck.setWorkGubun("");
+        workSafetyCheck.setWorkClass("");
+        workSafetyCheck.setState("");
+        workSafetyCheck.setIp(ip);
+        workSafetyCheck.setWorkSeq("0");
+        workSafetyCheck.setEtcParam1("");
+        workSafetyCheck =  workMapper.workSafetyCheck(workSafetyCheck);
 
-
-        WorkSafetyCheck workSafetyCheck =  workMapper.workSafetyCheck(requestHashMap);
-
-
-        HashMap<String, Object> result = new HashMap<String, Object>();
-        if("0".equals(workSafetyCheck.getErrCode())){
-            result.put("errCode", "0");
-            result.put("errMsg", "정상처리되었습니다.");
-            result.put("WorkSafetyCheck", workSafetyCheck);
-        }else{
-            result.put("errCode", workSafetyCheck.getErrCode());
-            result.put("errMsg",  "잘못 된 공사 현장 입니다. 다시 확인 부탁드립니다.");
-        }
-        return result;
+        return workSafetyCheck;
     }
     
 }

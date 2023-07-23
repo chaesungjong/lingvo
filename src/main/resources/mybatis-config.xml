@@ -5,7 +5,7 @@
         <package name="com.castlebell.lingvo"/>
     </typeAliases>
     <mappers>
-        <mapper resource="mybatis/xml/mapper/MemberMapper.xml"/>
+        <mapper resource="mybatis/xml/mapper/mmbMapper.xml"/>
         <mapper resource="mybatis/xml/mapper/workMapper.xml"/>
     </mappers>
 </configuration>

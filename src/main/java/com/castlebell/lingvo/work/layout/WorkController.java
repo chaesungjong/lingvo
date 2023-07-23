@@ -1,19 +1,27 @@
 package com.castlebell.lingvo.work.layout;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import com.castlebell.lingvo.cmm.CommonController;
+import com.castlebell.lingvo.cmm.domain.Member;
+import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
+import com.castlebell.lingvo.work.dao.domain.request.WorkClassMsgListRequest;
+import com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse;
+import com.castlebell.lingvo.work.service.WorkService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.castlebell.lingvo.cmm.CommonController;
-import com.castlebell.lingvo.domain.dao.mmb.Member;
-import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
-import com.castlebell.lingvo.work.service.WorkService;
 
 @Controller
 @RequestMapping("work")
@@ -60,8 +68,6 @@ public class WorkController extends CommonController{
 
 		WorkSafetyCheck result = workService.getSiteInfo(session, request);
 
-		result.getErrCode();
-
 		if(!"0".equals(result.getErrCode())){
 			model.addAttribute("errMsg", result.getErrMsg());
 			return "redirect:/work/main";
@@ -72,8 +78,7 @@ public class WorkController extends CommonController{
 		model.addAttribute("constName", result.getConstName());	 	//시공사
 		model.addAttribute("companyName", result.getCompanyName());	//시공사
 		model.addAttribute("workType", result.getWorkType());			//작업구분
-
-		session.setAttribute("workSeq", result.getWorkSeq());
+		session.setAttribute("WorkSafetyCheck", result);
 
 	    return "work/workQRConfirm";
 	}
@@ -84,7 +89,26 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/workCheckStep", method=RequestMethod.GET)
-	public String workCheckStep() {
+	public String workCheckStep(HttpServletRequest request, Model model ,HttpSession session) {
+
+		logger.debug("workCheckStep 진입 ");
+		if(!checkLogin(session, model)){
+			return "redirect:/mmb/login";
+		}
+
+		WorkClassMsgListRequest workClassMsgListRequest = new WorkClassMsgListRequest();
+		workClassMsgListRequest.setWorkGubun(request.getParameter("workGubun"));
+		workClassMsgListRequest.setWorkType(request.getParameter("workType"));
+
+		List<WorkClassMsgListResponse> workClassMsgList = workService.getWorkClassMsgList(workClassMsgListRequest);
+		List<String> message = new ArrayList<>();
+
+		for(int i = 0; i < workClassMsgList.size(); i++){
+			message.add(workClassMsgList.get(i).getMessage());
+		}
+
+
+		model.addAttribute("message", message);			//작업 메세지
 	    return "work/workCheckStep";
 	}
 
@@ -93,9 +117,76 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/workCheckStepConfirm", method=RequestMethod.GET)
-	public String workCheckStepConfirm() {
+	public String workCheckStepConfirm(HttpServletRequest request, Model model ,HttpSession session) {
+
+		logger.debug("workCheckStepConfirm 진입 ");
+		if(!checkLogin(session, model)){
+			return "redirect:/mmb/login";
+		}
+
+		WorkSafetyCheck result = workService.checkSurvey(session, request,"SURVEY_END","N");
+
+		if(result.getErrCode() != null && !"0".equals(result.getErrCode())){
+			model.addAttribute("errMsg", result.getErrMsg());
+			return "redirect:/work/main";
+		}
+
 	    return "work/workCheckStepConfirm";
 	}
+
+	@RequestMapping(value = "workStartARSCall", method=RequestMethod.GET)
+    public ResponseEntity<Object> workStartARSCall(HttpServletRequest request, HttpSession session) {
+
+		logger.debug("workStartARSCall 진입 ");
+        Map<String, String> responseMap = new HashMap<>();
+        responseMap.put("errMsg", "ARS 인증 요청을 실패 하였습니다.");
+
+		if(!checkLogin(session)){
+			return new ResponseEntity<>(responseMap, HttpStatus.OK);
+		}
+
+		WorkSafetyCheck result = workService.checkSurvey(session, request,"AICALL_START","N");
+
+
+		if(result.getErrCode() != null && !"0".equals(result.getErrCode())){
+			return new ResponseEntity<>(responseMap, HttpStatus.OK);
+		}
+		
+		responseMap.put("errCode", result.getErrCode());
+		responseMap.put("errMsg", result.getErrMsg());
+
+
+        // ResponseEntity를 사용하여 JSON 응답을 반환합니다.
+        return new ResponseEntity<>(responseMap, HttpStatus.OK);
+    }
+
+	/**
+	 * ARS 인증 결과 
+	 * @return
+	 */   
+    @RequestMapping(value = "/resultWorkARSCall", method=RequestMethod.GET)
+	public String resultWorkARSCall(HttpServletRequest request, HttpSession session, Model model) {
+
+		logger.debug("resultWorkARSCall 진입 ");
+		if(!checkLogin(session, model)){
+			return "redirect:/mmb/login";
+		}
+
+		String gubun = request.getParameter("gubun");
+		String workGubun = request.getParameter("workGubun");
+		
+		WorkSafetyCheck result = workService.checkSurvey(session, request,gubun,workGubun);
+
+		if(result.getErrCode() != null && !"0".equals(result.getErrCode())){
+			return "redirect:/mmb/login";
+		}
+		
+		model.addAttribute("errCode", result.getErrCode());
+		model.addAttribute("errMsg", result.getErrMsg());
+
+	    return "redirect:/mmb/login";
+	}
+
 
 
 	/**
@@ -113,7 +204,21 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/workedList", method=RequestMethod.GET)
-	public String workedList() {
+	public String workedList(HttpServletRequest request, Model model ,HttpSession session) {
+
+		if(!checkLogin(session, model)){
+			return "redirect:/mmb/login";
+		}
+
+		Member member = (Member) session.getAttribute("member");
+		WorkSafetyCheck workSafetyCheck =(WorkSafetyCheck) session.getAttribute("WorkSafetyCheck");
+
+		model.addAttribute("name", member.getName());								//이름
+		model.addAttribute("siteName", workSafetyCheck.getSiteName());			//현장	
+		model.addAttribute("constName", workSafetyCheck.getConstName());	 		//시공사
+		model.addAttribute("companyName", workSafetyCheck.getCompanyName());		//시공사
+		model.addAttribute("workType", workSafetyCheck.getWorkType());			//작업구분
+
 	    return "work/workedList";
 	}
 
@@ -228,8 +333,5 @@ public class WorkController extends CommonController{
 	public String workImprovementReview() {
 	    return "work/workImprovementReview";
 	}
-
-	
-
 }
 

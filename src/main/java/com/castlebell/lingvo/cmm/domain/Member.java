@@ -1,4 +1,4 @@
-package com.castlebell.lingvo.domain.dao.mmb;
+package com.castlebell.lingvo.cmm.domain;
 
 import java.io.Serializable;
 

@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<input type="hidden" id="name"        value="${name}">
+<input type="hidden" id="siteName"    value="${siteName}">
+<input type="hidden" id="constName"   value="${constName}">
+<input type="hidden" id="companyName" value="${companyName}">
+<input type="hidden" id="workType"    value="${workType}">
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-4" name="next">
+        <div class="col-md-4" name="next" value="1">
             <div class="card mb-4">
                 <div class="row g-0">
                     <div class="col-auto">
@@ -15,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4" name="next">
+        <div class="col-md-4" name="next" value="2">
             <div class="card mb-4">
                 <div class="row g-0">
                     <div class="col-auto">
@@ -29,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4" name="next">
+        <div class="col-md-4" name="next" value="3">
             <div class="card mb-4">
                 <div class="row g-0">
                     <div class="col-auto">

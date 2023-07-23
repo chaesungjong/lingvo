@@ -3,12 +3,13 @@ package com.castlebell.lingvo.mmb.controller;
 import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import com.castlebell.lingvo.cmm.CommonController;
+import com.castlebell.lingvo.mmb.dao.domain.request.RequestLogin;
 import com.castlebell.lingvo.mmb.service.MemberService;
 import com.castlebell.lingvo.util.StringUtil;
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ import org.slf4j.LoggerFactory;
  */
 @Controller
 @RequestMapping("mmb")
-public class MemberController {
+public class MemberController extends CommonController{
 	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
     private final MemberService memberService;
@@ -41,6 +42,7 @@ public class MemberController {
 
 	/*
 	 * 로그인 처리
+	 * @return
 	 */
 	@RequestMapping(value="/loginProcess.do", method = {RequestMethod.POST})
 	public String loginProcess(HttpServletRequest request, 	Model model ,HttpSession session) {
@@ -56,12 +58,18 @@ public class MemberController {
 			return "mmb/login";
 		}
 
-		logger.debug("사용자 로그인 처리 userid : " + userid + " pwd : " + pwd + " userIP : " + userIP + " clientType : " + clientType);
+		RequestLogin requestLogin = new RequestLogin();
 
-		resultMap = memberService.loginProcess(userid,pwd,userIP,clientType,session);
+		requestLogin.setUserid(userid);
+		requestLogin.setUserpw(pwd);
+		requestLogin.setIp(userIP);
+		requestLogin.setClienttype(clientType);
 
+		logger.debug("사용자 로그인 처리 : requestLogin : {}", requestLogin);
+		//로그인 처리
+		resultMap = memberService.loginProcess(requestLogin,session);
+		//로그인 처리 결과
 		String retVal = StringUtil.objectToString(resultMap.get("retVal"));
-
 		//로그인 실패
 		if(!"0".equals(retVal)){
 			model.addAttribute("errMsg", StringUtil.objectToString(resultMap.get("errMsg")));

@@ -1,16 +1,16 @@
 package com.castlebell.lingvo.work.service;
 
-import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.castlebell.lingvo.domain.dao.mmb.Member;
+import com.castlebell.lingvo.cmm.domain.Member;
 import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
-import com.castlebell.lingvo.repository.WorkMapper;
+import com.castlebell.lingvo.work.dao.WorkMapper;
+import com.castlebell.lingvo.work.dao.domain.request.WorkClassMsgListRequest;
+import com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse;
 
 @Service
 public class WorkServiceImpl implements WorkService{
@@ -45,6 +45,33 @@ public class WorkServiceImpl implements WorkService{
         workSafetyCheck.setEtcParam1("");
         workSafetyCheck =  workMapper.workSafetyCheck(workSafetyCheck);
 
+        return workSafetyCheck;
+    }
+
+
+    @Override
+    public List<WorkClassMsgListResponse> getWorkClassMsgList(WorkClassMsgListRequest workClassMsgListRequest) {
+        return workMapper.getWorkClassMsgList(workClassMsgListRequest);
+    }
+
+
+    @Override
+    public WorkSafetyCheck checkSurvey(HttpSession session, HttpServletRequest request,String gubun,String WorkGubun) {
+
+        Member member = (Member) session.getAttribute("member");
+        WorkSafetyCheck workSafetyCheck = (WorkSafetyCheck) session.getAttribute("WorkSafetyCheck");
+
+        String ip = request.getRemoteAddr();
+        String userid = member.getUserid();
+
+        workSafetyCheck.setGubun(gubun);
+        workSafetyCheck.setWorkGubun(WorkGubun);
+        workSafetyCheck.setWorkClass("");
+        workSafetyCheck.setIp(ip);
+        workSafetyCheck.setUserid(userid);
+        workSafetyCheck = workMapper.workSafetyCheck(workSafetyCheck);
+        session.setAttribute("WorkSafetyCheck", workSafetyCheck);
+        
         return workSafetyCheck;
     }
     

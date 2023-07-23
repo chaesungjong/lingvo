@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<input type="hidden" id="message"    value="${message}">
 <div class="container mt-5">
     <div class="card">
         <div class="card-body">

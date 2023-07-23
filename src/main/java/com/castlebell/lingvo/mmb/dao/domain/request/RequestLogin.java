@@ -1,8 +1,8 @@
-package com.castlebell.lingvo.domain.dao.mmb;
+package com.castlebell.lingvo.mmb.dao.domain.request;
 
 import java.io.Serializable;
 
-public class LoginResult implements Serializable {
+public class RequestLogin implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -59,5 +59,10 @@ public class LoginResult implements Serializable {
 
     public void setErrMsg(String errMsg) {
         this.errMsg = errMsg;
+    }
+    
+    @Override
+    public String toString() {
+        return "RequestLogin [userid=" + userid + ", userpw=" + userpw + ", ip=" + ip + ", clienttype=" + clienttype + ", retVal=" + retVal + ", errMsg=" + errMsg + "]";
     }
 }

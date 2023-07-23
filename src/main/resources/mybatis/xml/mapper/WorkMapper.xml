@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.castlebell.lingvo.repository.WorkMapper">
+<mapper namespace="com.castlebell.lingvo.work.dao.WorkMapper">
 
   <!-- 금일 작업시작하기, 예방활동체크 Start -->
   <resultMap id="workSafetyCheckMap" type="com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck">
@@ -15,6 +15,38 @@
     <result property="workSeq"           column="WORKSEQ" />
   </resultMap>
   <select id="workSafetyCheck" resultMap="workSafetyCheckMap"  statementType="CALLABLE">
+        { call [dbo].[workSafetyCheck](
+            #{gubun},
+            #{userid},
+            #{qrCode},
+            #{workGubun},
+            #{workClass},
+            #{state},
+            #{ip},
+            #{workSeq},
+            #{etcParam1},
+            #{errMsg, mode=OUT, jdbcType=VARCHAR}
+          )
+        }
+  </select>
+  <!-- 금일 작업시작하기, 예방활동체크 End -->
+  <!-- 안전예방활동체크 질문 리스트 Start -->
+  <resultMap id="workClassMsgListMap" type="com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse">
+    <result property="step"                 column="step" />
+    <result property="stepTotal"            column="stepTotal" />
+    <result property="message"              column="message" />
+  </resultMap>
+  <select id="getWorkClassMsgList" resultMap="workClassMsgListMap"  statementType="CALLABLE">
+        { call [dbo].[workClassMsgList](
+            #{workGubun},
+            #{workType}
+          )
+        }
+  </select>
+  <!-- 안전예방활동체크 질문 리스트 End -->
+
+  <!-- 금일 작업시작하기, 예방활동체크 Start -->
+  <select id="checkSurvey" resultMap="workSafetyCheckMap"  statementType="CALLABLE">
         { call [dbo].[workSafetyCheck](
             #{gubun},
             #{userid},

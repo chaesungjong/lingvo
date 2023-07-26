@@ -1,4 +1,4 @@
-package com.castlebell.lingvo.work.layout;
+package com.castlebell.lingvo.work.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -61,10 +61,10 @@ public class WorkController extends CommonController{
 	 */   
     @RequestMapping(value = "/workQRConfirm", method=RequestMethod.GET)
 	public String workQRConfirm(HttpServletRequest request, Model model ,HttpSession session) {
-		logger.debug("workQRConfirm 진입 ");
-		if(!checkLogin(session, model)){
-			return "redirect:/mmb/login";
-		}
+
+		logger.debug("workQRConfirm 진입");
+
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
 
 		WorkSafetyCheck result = workService.getSiteInfo(session, request);
 
@@ -92,9 +92,8 @@ public class WorkController extends CommonController{
 	public String workCheckStep(HttpServletRequest request, Model model ,HttpSession session) {
 
 		logger.debug("workCheckStep 진입 ");
-		if(!checkLogin(session, model)){
-			return "redirect:/mmb/login";
-		}
+
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
 
 		WorkClassMsgListRequest workClassMsgListRequest = new WorkClassMsgListRequest();
 		workClassMsgListRequest.setWorkGubun(request.getParameter("workGubun"));
@@ -106,7 +105,6 @@ public class WorkController extends CommonController{
 		for(int i = 0; i < workClassMsgList.size(); i++){
 			message.add(workClassMsgList.get(i).getMessage());
 		}
-
 
 		model.addAttribute("message", message);			//작업 메세지
 	    return "work/workCheckStep";
@@ -120,11 +118,11 @@ public class WorkController extends CommonController{
 	public String workCheckStepConfirm(HttpServletRequest request, Model model ,HttpSession session) {
 
 		logger.debug("workCheckStepConfirm 진입 ");
-		if(!checkLogin(session, model)){
-			return "redirect:/mmb/login";
-		}
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
 
-		WorkSafetyCheck result = workService.checkSurvey(session, request,"SURVEY_END","N");
+		String workGubun = request.getParameter("workGubun");
+
+		WorkSafetyCheck result = workService.checkSurvey(session, request,"SURVEY_END",workGubun);
 
 		if(result.getErrCode() != null && !"0".equals(result.getErrCode())){
 			model.addAttribute("errMsg", result.getErrMsg());
@@ -134,6 +132,12 @@ public class WorkController extends CommonController{
 	    return "work/workCheckStepConfirm";
 	}
 
+	/**
+	 * 작업시작 ARS 인증 요청
+	 * @param request
+	 * @param session
+	 * @return
+	 */
 	@RequestMapping(value = "workStartARSCall", method=RequestMethod.GET)
     public ResponseEntity<Object> workStartARSCall(HttpServletRequest request, HttpSession session) {
 
@@ -141,12 +145,9 @@ public class WorkController extends CommonController{
         Map<String, String> responseMap = new HashMap<>();
         responseMap.put("errMsg", "ARS 인증 요청을 실패 하였습니다.");
 
-		if(!checkLogin(session)){
-			return new ResponseEntity<>(responseMap, HttpStatus.OK);
-		}
+		if(!checkLogin(session)){ return new ResponseEntity<>(responseMap, HttpStatus.OK); }
 
 		WorkSafetyCheck result = workService.checkSurvey(session, request,"AICALL_START","N");
-
 
 		if(result.getErrCode() != null && !"0".equals(result.getErrCode())){
 			return new ResponseEntity<>(responseMap, HttpStatus.OK);
@@ -154,7 +155,6 @@ public class WorkController extends CommonController{
 		
 		responseMap.put("errCode", result.getErrCode());
 		responseMap.put("errMsg", result.getErrMsg());
-
 
         // ResponseEntity를 사용하여 JSON 응답을 반환합니다.
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
@@ -168,8 +168,9 @@ public class WorkController extends CommonController{
 	public String resultWorkARSCall(HttpServletRequest request, HttpSession session, Model model) {
 
 		logger.debug("resultWorkARSCall 진입 ");
+		String returnURL =  "redirect:/work/main";
 		if(!checkLogin(session, model)){
-			return "redirect:/mmb/login";
+			return returnURL;
 		}
 
 		String gubun = request.getParameter("gubun");
@@ -178,13 +179,13 @@ public class WorkController extends CommonController{
 		WorkSafetyCheck result = workService.checkSurvey(session, request,gubun,workGubun);
 
 		if(result.getErrCode() != null && !"0".equals(result.getErrCode())){
-			return "redirect:/mmb/login";
+			return returnURL;
 		}
 		
 		model.addAttribute("errCode", result.getErrCode());
 		model.addAttribute("errMsg", result.getErrMsg());
 
-	    return "redirect:/mmb/login";
+	    return returnURL;
 	}
 
 

@@ -5,8 +5,22 @@ $(document).ready(function() {
      */
     getLocation(locationUI);
 
+
+    /**
+     * 금일 작업 시작 버튼 클릭 
+     */
+    $("#workStart").click(function() {
+        openQRCode('/work/workQRConfirm');
+    });
+      
+
 });
 
+
+/**
+ * 위도 경도를 가져와서 화면에 뿌려준다.
+ * @param {*} res 
+ */
 function locationUI(res){
 
     //지역
@@ -21,9 +35,4 @@ function locationUI(res){
     $("#detailLink").on("click",function(){
         location.href = res.MobileLink;
     });
-}
-
-function startWork(url,data){
-
-    location.href = url;
 }

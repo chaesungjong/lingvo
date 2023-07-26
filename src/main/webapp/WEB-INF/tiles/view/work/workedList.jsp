@@ -6,7 +6,7 @@
 <input type="hidden" id="workType"    value="${workType}">
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-4" name="next" value="1">
+        <div class="col-md-4" name="next" value="N">
             <div class="card mb-4">
                 <div class="row g-0">
                     <div class="col-auto">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4" name="next" value="2">
+        <div class="col-md-4" name="next" value="R">
             <div class="card mb-4">
                 <div class="row g-0">
                     <div class="col-auto">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4" name="next" value="3">
+        <div class="col-md-4" name="next" value="S">
             <div class="card mb-4">
                 <div class="row g-0">
                     <div class="col-auto">

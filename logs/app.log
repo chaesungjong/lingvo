@@ -4145,3 +4145,671 @@ java.lang.NullPointerException: Cannot invoke "org.apache.tiles.request.Applicat
 2023-07-23 16:33:24.622  INFO 6504 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
 2023-07-23 16:34:42.217  INFO 6504 --- [http-nio-8080-exec-9] c.c.l.mmb.controller.MemberController    : loginPage 진입
 2023-07-23 21:04:37.617  INFO 6504 --- [http-nio-8080-exec-5] c.c.l.mmb.controller.MemberController    : loginPage 진입
+2023-07-23 21:12:09.647  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 22564 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:12:09.649  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:12:09.687  INFO 22564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:12:09.687  INFO 22564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:12:10.894  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:12:10.905  INFO 22564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:12:10.906  INFO 22564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:12:11.088  INFO 22564 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:12:11.100  INFO 22564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:12:11.102  INFO 22564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1414 ms
+2023-07-23 21:12:11.509  INFO 22564 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:12:11.838  INFO 22564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:12:12.134  INFO 22564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:12:12.213  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:12:12.235  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.926 seconds (JVM running for 3.433)
+2023-07-23 21:12:12.343  INFO 22564 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:12:12.345  INFO 22564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:12:12.347  INFO 22564 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 21:14:38.467  INFO 22564 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 21:14:38.475  INFO 22564 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 21:14:38.477  INFO 22564 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 21:14:38.489  INFO 22564 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:14:38.595  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 22564 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:14:38.597  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:14:38.889  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:14:38.890  INFO 22564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:14:38.891  INFO 22564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:14:38.996  INFO 22564 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:14:39.001  INFO 22564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:14:39.001  INFO 22564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 400 ms
+2023-07-23 21:14:39.134  INFO 22564 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:14:39.205  INFO 22564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:14:39.286  INFO 22564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:14:39.301  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:14:39.304  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.761 seconds (JVM running for 150.501)
+2023-07-23 21:14:39.308  INFO 22564 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 21:14:40.708  INFO 22564 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 21:14:40.714  INFO 22564 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 21:14:40.718  INFO 22564 --- [Thread-7] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:14:40.819  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 22564 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:14:40.820  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:14:41.304  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:14:41.309  INFO 22564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:14:41.320  INFO 22564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:14:41.462  INFO 22564 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:14:41.467  INFO 22564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:14:41.468  INFO 22564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 643 ms
+2023-07-23 21:14:41.595  INFO 22564 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:14:41.669  INFO 22564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:14:41.763  INFO 22564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:14:41.786  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:14:41.790  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 1.028 seconds (JVM running for 152.988)
+2023-07-23 21:14:41.794  INFO 22564 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 21:14:43.176  INFO 22564 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-07-23 21:14:43.180  INFO 22564 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 21:14:43.185  INFO 22564 --- [Thread-11] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:14:43.256  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 22564 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:14:43.257  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:14:43.460  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:14:43.462  INFO 22564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:14:43.463  INFO 22564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:14:43.529  INFO 22564 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:14:43.530  INFO 22564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:14:43.531  INFO 22564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 270 ms
+2023-07-23 21:14:43.607  INFO 22564 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:14:43.659  INFO 22564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:14:43.709  INFO 22564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:14:43.721  INFO 22564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:14:43.725  INFO 22564 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.505 seconds (JVM running for 154.922)
+2023-07-23 21:14:43.727  INFO 22564 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 21:14:48.896  INFO 23308 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 23308 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:14:48.897  INFO 23308 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:14:48.930  INFO 23308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:14:48.930  INFO 23308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:14:49.822  INFO 23308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:14:49.832  INFO 23308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:14:49.833  INFO 23308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:14:49.980  INFO 23308 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:14:49.991  INFO 23308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:14:49.992  INFO 23308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1061 ms
+2023-07-23 21:14:50.331  INFO 23308 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:14:50.647  INFO 23308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:14:50.919  INFO 23308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:14:51.004  INFO 23308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:14:51.024  INFO 23308 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.43 seconds (JVM running for 2.877)
+2023-07-23 21:14:55.718  INFO 23308 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:14:55.719  INFO 23308 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:14:55.720  INFO 23308 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 21:15:24.812  INFO 23308 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 21:15:24.820  INFO 23308 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 21:15:24.822  INFO 23308 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 21:15:24.835  INFO 23308 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:15:24.912  INFO 23308 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 23308 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:15:24.913  INFO 23308 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:15:25.156  INFO 23308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:15:25.158  INFO 23308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:15:25.158  INFO 23308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:15:25.269  INFO 23308 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:15:25.273  INFO 23308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:15:25.274  INFO 23308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 357 ms
+2023-07-23 21:15:25.393  INFO 23308 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:15:25.468  INFO 23308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:15:25.556  INFO 23308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:15:25.576  INFO 23308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:15:25.581  INFO 23308 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.706 seconds (JVM running for 37.434)
+2023-07-23 21:15:25.585  INFO 23308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 21:17:46.507  INFO 23472 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 23472 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:17:46.508  INFO 23472 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:17:46.539  INFO 23472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:17:46.540  INFO 23472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:17:47.530  INFO 23472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:17:47.541  INFO 23472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:17:47.541  INFO 23472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:17:47.686  INFO 23472 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:17:47.696  INFO 23472 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:17:47.698  INFO 23472 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1157 ms
+2023-07-23 21:17:48.051  INFO 23472 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:17:48.360  INFO 23472 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:17:48.705  INFO 23472 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:17:48.789  INFO 23472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:17:48.812  INFO 23472 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.608 seconds (JVM running for 3.068)
+2023-07-23 21:25:31.215  INFO 22080 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 22080 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:25:31.218  INFO 22080 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:25:31.267  INFO 22080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:25:31.268  INFO 22080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:25:32.152  INFO 22080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:25:32.164  INFO 22080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:25:32.164  INFO 22080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:25:32.309  INFO 22080 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:25:32.320  INFO 22080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:25:32.320  INFO 22080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1051 ms
+2023-07-23 21:25:32.650  INFO 22080 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:25:32.924  INFO 22080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:25:33.223  INFO 22080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:25:33.300  INFO 22080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:25:33.316  INFO 22080 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.414 seconds (JVM running for 2.897)
+2023-07-23 21:26:35.590  INFO 22080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:26:35.590  INFO 22080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:26:35.591  INFO 22080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-23 21:29:09.653  INFO 22080 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 21:29:09.661  INFO 22080 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 21:29:09.663  INFO 22080 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 21:29:09.678  INFO 22080 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:29:09.759  INFO 22080 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 22080 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:29:09.760  INFO 22080 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:29:09.998  INFO 22080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:29:09.999  INFO 22080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:29:10.000  INFO 22080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:29:10.111  INFO 22080 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:29:10.115  INFO 22080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:29:10.116  INFO 22080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 352 ms
+2023-07-23 21:29:10.253  INFO 22080 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:29:10.336  INFO 22080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:29:10.432  INFO 22080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:29:10.454  INFO 22080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:29:10.459  INFO 22080 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.74 seconds (JVM running for 220.041)
+2023-07-23 21:29:10.463  INFO 22080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 21:29:11.957  INFO 7460 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 7460 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:29:11.959  INFO 7460 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:29:11.991  INFO 7460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:29:11.991  INFO 7460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:29:12.894  INFO 7460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:29:12.901  INFO 7460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:29:12.902  INFO 7460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:29:13.047  INFO 7460 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:29:13.061  INFO 7460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:29:13.062  INFO 7460 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1070 ms
+2023-07-23 21:29:13.477  INFO 7460 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:29:13.784  INFO 7460 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:29:14.087  INFO 7460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:29:14.168  INFO 7460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:29:14.188  INFO 7460 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.544 seconds (JVM running for 3.004)
+2023-07-23 21:30:35.850  INFO 7460 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:30:35.850  INFO 7460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:30:35.851  INFO 7460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-23 21:32:38.291  INFO 17352 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 17352 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:32:38.292  INFO 17352 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:32:38.325  INFO 17352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:32:38.326  INFO 17352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:32:39.244  INFO 17352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:32:39.255  INFO 17352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:32:39.256  INFO 17352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:32:39.397  INFO 17352 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:32:39.407  INFO 17352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:32:39.408  INFO 17352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1082 ms
+2023-07-23 21:32:39.805  INFO 17352 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:32:40.119  INFO 17352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:32:40.380  INFO 17352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:32:40.446  INFO 17352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:32:40.466  INFO 17352 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.5 seconds (JVM running for 2.942)
+2023-07-23 21:32:43.515  INFO 17352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:32:43.516  INFO 17352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:32:43.518  INFO 17352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 21:32:43.574  INFO 17352 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 21:32:43.791  INFO 17352 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 21:34:49.407  INFO 17352 --- [http-nio-8080-exec-3] c.c.l.mmb.controller.MemberController    : loginPage 진입
+2023-07-23 21:35:38.362  INFO 17352 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 21:35:38.370  INFO 17352 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 21:35:38.371  INFO 17352 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 21:35:38.381  WARN 17352 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [mssql-jdbc-shared-timer-core-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 21:35:38.383  WARN 17352 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 21:35:38.390  INFO 17352 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:35:38.391  INFO 17352 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 21:35:38.394  INFO 17352 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 21:35:38.491  INFO 17352 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 17352 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:35:38.492  INFO 17352 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:35:38.727  INFO 17352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:35:38.728  INFO 17352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:35:38.729  INFO 17352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:35:38.838  INFO 17352 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:35:38.843  INFO 17352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:35:38.844  INFO 17352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 349 ms
+2023-07-23 21:35:38.950  INFO 17352 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:35:40.840  INFO 8212 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 8212 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:35:40.843  INFO 8212 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:35:40.874  INFO 8212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:35:40.875  INFO 8212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:35:41.784  INFO 8212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:35:41.796  INFO 8212 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:35:41.797  INFO 8212 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:35:41.938  INFO 8212 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:35:41.949  INFO 8212 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:35:41.949  INFO 8212 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
+2023-07-23 21:35:42.297  INFO 8212 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:35:42.589  INFO 8212 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:35:42.897  INFO 8212 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:35:42.963  INFO 8212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:35:42.980  INFO 8212 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.445 seconds (JVM running for 2.889)
+2023-07-23 21:35:47.509  INFO 8212 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:35:47.510  INFO 8212 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:35:47.511  INFO 8212 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 21:35:47.526  INFO 8212 --- [http-nio-8080-exec-2] c.c.l.mmb.controller.MemberController    : loginPage 진입
+2023-07-23 21:35:51.281  INFO 8212 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 21:35:51.479  INFO 8212 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 21:58:28.006  INFO 23164 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 23164 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:58:28.009  INFO 23164 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:58:28.044  INFO 23164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 21:58:28.045  INFO 23164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 21:58:28.944  INFO 23164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:58:28.951  INFO 23164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:58:28.952  INFO 23164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:58:29.092  INFO 23164 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:58:29.102  INFO 23164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:58:29.103  INFO 23164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1057 ms
+2023-07-23 21:58:29.490  INFO 23164 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:58:29.796  INFO 23164 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:58:30.108  INFO 23164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:58:30.204  INFO 23164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:58:30.219  INFO 23164 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.533 seconds (JVM running for 3.015)
+2023-07-23 21:58:32.954  INFO 23164 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-07-23 21:58:32.964  INFO 23164 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 21:58:32.965  INFO 23164 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:58:32.966  INFO 23164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:58:32.967  INFO 23164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 21:58:32.968  INFO 23164 --- [Thread-5] o.apache.catalina.core.StandardWrapper   : Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-07-23 21:58:33.073  INFO 23164 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 21:58:33.094  INFO 23164 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:58:33.228  INFO 23164 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 23164 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 21:58:33.230  INFO 23164 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 21:58:33.601  INFO 23164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 21:58:33.602  INFO 23164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 21:58:33.603  INFO 23164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 21:58:33.707  INFO 23164 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 21:58:33.711  INFO 23164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 21:58:33.712  INFO 23164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 476 ms
+2023-07-23 21:58:33.827  INFO 23164 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 21:58:33.912  INFO 23164 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 21:58:33.994  INFO 23164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 21:58:34.014  INFO 23164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 21:58:34.020  INFO 23164 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.86 seconds (JVM running for 6.815)
+2023-07-23 21:58:34.024  INFO 23164 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 21:58:34.095  INFO 23164 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 21:58:34.097  INFO 23164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 21:58:34.099  INFO 23164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-23 21:58:34.102  INFO 23164 --- [http-nio-8080-exec-1] c.c.l.mmb.controller.MemberController    : loginPage 진입
+2023-07-23 21:58:38.248  INFO 23164 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 21:58:38.443  INFO 23164 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 22:08:05.982  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:08:05.983  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:08:06.015  INFO 21960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 22:08:06.015  INFO 21960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 22:08:06.976  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:08:06.989  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:08:06.990  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:08:07.148  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:08:07.159  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:08:07.160  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1144 ms
+2023-07-23 22:08:07.577  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:08:07.893  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:08:08.260  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:08:08.347  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:08:08.367  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.683 seconds (JVM running for 3.116)
+2023-07-23 22:08:11.842  INFO 21960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 22:08:11.843  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 22:08:11.844  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-23 22:08:18.796  INFO 21960 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 22:08:19.022  INFO 21960 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 22:12:08.212  INFO 21960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:12:08.220  INFO 21960 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:12:08.222  INFO 21960 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 22:12:08.228  WARN 21960 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [mssql-jdbc-shared-timer-core-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:12:08.230  WARN 21960 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:12:08.234  INFO 21960 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:12:08.235  INFO 21960 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 22:12:08.238  INFO 21960 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 22:12:08.335  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:12:08.337  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:12:08.638  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:12:08.640  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:12:08.641  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:12:08.756  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:12:08.761  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:12:08.763  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 418 ms
+2023-07-23 22:12:08.894  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:12:08.975  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:12:09.065  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:12:09.092  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:12:09.097  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.811 seconds (JVM running for 243.846)
+2023-07-23 22:12:09.105  INFO 21960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:12:33.411  INFO 21960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 22:12:33.412  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 22:12:33.413  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 22:29:31.149  INFO 21960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:29:31.155  INFO 21960 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:29:31.156  INFO 21960 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 22:29:31.160  INFO 21960 --- [Thread-7] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:29:31.282  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:29:31.284  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:29:31.551  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:29:31.553  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:29:31.554  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:29:31.642  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:29:31.648  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:29:31.649  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 360 ms
+2023-07-23 22:29:31.743  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:29:31.802  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:29:31.874  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:29:31.889  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:29:31.893  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.669 seconds (JVM running for 1286.642)
+2023-07-23 22:29:31.896  INFO 21960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:29:39.350  INFO 21960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:29:39.355  INFO 21960 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:29:39.360  INFO 21960 --- [Thread-11] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:29:39.430  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:29:39.431  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:29:39.660  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:29:39.662  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:29:39.663  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:29:39.749  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:29:39.753  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:29:39.754  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 321 ms
+2023-07-23 22:29:39.829  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:29:39.886  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:29:39.948  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:29:39.964  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:29:39.969  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.566 seconds (JVM running for 1294.717)
+2023-07-23 22:29:39.972  INFO 21960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:33:20.406  INFO 21960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:33:20.411  INFO 21960 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:33:20.417  INFO 21960 --- [Thread-15] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:33:20.486  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:33:20.487  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:33:20.637  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:33:20.638  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:33:20.639  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:33:20.692  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:33:20.694  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:33:20.695  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 205 ms
+2023-07-23 22:33:20.738  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:33:20.757  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:33:20.785  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:33:20.795  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:33:20.797  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.338 seconds (JVM running for 1515.546)
+2023-07-23 22:33:20.798  INFO 21960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:33:35.400  INFO 21960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:33:35.406  INFO 21960 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:33:35.410  INFO 21960 --- [Thread-19] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:33:35.486  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:33:35.486  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:33:35.615  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:33:35.616  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:33:35.616  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:33:35.664  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:33:35.666  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:33:35.666  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 177 ms
+2023-07-23 22:33:35.709  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:33:35.724  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:33:35.742  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:33:35.748  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:33:35.749  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.295 seconds (JVM running for 1530.498)
+2023-07-23 22:33:35.750  INFO 21960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:34:34.396  INFO 21960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:34:34.402  INFO 21960 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:34:34.406  INFO 21960 --- [Thread-23] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:34:34.467  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:34:34.468  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:34:34.599  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:34:34.599  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:34:34.600  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:34:34.656  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:34:34.659  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:34:34.660  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2023-07-23 22:34:34.720  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:34:34.741  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:34:34.770  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:34:34.778  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:34:34.781  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.336 seconds (JVM running for 1589.529)
+2023-07-23 22:34:34.782  INFO 21960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:35:17.008  INFO 21960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 22:35:17.008  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 22:35:17.009  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-23 22:35:22.264  INFO 21960 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-07-23 22:35:22.317  INFO 21960 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-07-23 22:37:22.406  INFO 21960 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:37:22.412  INFO 21960 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:37:22.413  INFO 21960 --- [Thread-27] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 22:37:22.416  WARN 21960 --- [Thread-27] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [mssql-jdbc-shared-timer-core-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:37:22.417  WARN 21960 --- [Thread-27] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:37:22.420  INFO 21960 --- [Thread-27] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:37:22.420  INFO 21960 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-07-23 22:37:22.421  INFO 21960 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-07-23 22:37:22.489  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 21960 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:37:22.490  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:37:22.610  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:37:22.611  INFO 21960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:37:22.612  INFO 21960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:37:22.664  INFO 21960 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:37:22.667  INFO 21960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:37:22.667  INFO 21960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 176 ms
+2023-07-23 22:37:22.741  INFO 21960 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:37:22.758  INFO 21960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:37:22.780  INFO 21960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:37:22.787  INFO 21960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:37:22.789  INFO 21960 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.324 seconds (JVM running for 1757.538)
+2023-07-23 22:37:22.791  INFO 21960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:37:47.103  INFO 21960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 22:37:47.104  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 22:37:47.104  INFO 21960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-23 22:37:47.106  INFO 21960 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-07-23 22:37:47.161  INFO 21960 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-07-23 22:41:41.190  INFO 11704 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 11704 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:41:41.192  INFO 11704 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:41:41.225  INFO 11704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 22:41:41.225  INFO 11704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 22:41:42.141  INFO 11704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:41:42.150  INFO 11704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:41:42.152  INFO 11704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:41:42.295  INFO 11704 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:41:42.307  INFO 11704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:41:42.307  INFO 11704 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2023-07-23 22:41:42.688  INFO 11704 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:41:42.985  INFO 11704 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:41:43.262  INFO 11704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:41:43.340  INFO 11704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:41:43.360  INFO 11704 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.496 seconds (JVM running for 2.96)
+2023-07-23 22:41:56.493  INFO 11704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 22:41:56.494  INFO 11704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 22:41:56.495  INFO 11704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 22:41:56.546  INFO 11704 --- [http-nio-8080-exec-2] c.c.l.mmb.controller.MemberController    : loginPage 진입
+2023-07-23 22:42:00.046  INFO 11704 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 22:42:00.245  INFO 11704 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 22:48:23.359  INFO 24396 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 24396 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:48:23.361  INFO 24396 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:48:23.394  INFO 24396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 22:48:23.395  INFO 24396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 22:48:24.334  INFO 24396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:48:24.342  INFO 24396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:48:24.343  INFO 24396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:48:24.504  INFO 24396 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:48:24.515  INFO 24396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:48:24.516  INFO 24396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
+2023-07-23 22:48:24.883  INFO 24396 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:48:25.186  INFO 24396 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:48:25.536  INFO 24396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:48:25.618  INFO 24396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:48:25.641  INFO 24396 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.601 seconds (JVM running for 3.051)
+2023-07-23 22:48:26.863  INFO 24396 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 22:48:26.864  INFO 24396 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 22:48:26.865  INFO 24396 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 22:48:26.919  INFO 24396 --- [http-nio-8080-exec-1] c.c.l.mmb.controller.MemberController    : loginPage 진입
+2023-07-23 22:48:30.692  INFO 24396 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 22:48:30.930  INFO 24396 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 22:50:47.768  INFO 24396 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:50:47.777  INFO 24396 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:50:47.779  INFO 24396 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 22:50:47.785  WARN 24396 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [mssql-jdbc-shared-timer-core-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:50:47.787  WARN 24396 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:50:47.793  INFO 24396 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:50:47.794  INFO 24396 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 22:50:47.796  INFO 24396 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 22:50:47.878  INFO 24396 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 24396 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:50:47.879  INFO 24396 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:50:48.176  INFO 24396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:50:48.178  INFO 24396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:50:48.179  INFO 24396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:50:48.300  INFO 24396 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:50:48.305  INFO 24396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:50:48.306  INFO 24396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 423 ms
+2023-07-23 22:50:48.446  INFO 24396 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:50:48.517  INFO 24396 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:50:48.585  INFO 24396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:50:48.599  INFO 24396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:50:48.602  INFO 24396 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.769 seconds (JVM running for 146.011)
+2023-07-23 22:50:48.605  INFO 24396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:53:56.652  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 18468 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:53:56.654  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:53:56.687  INFO 18468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 22:53:56.687  INFO 18468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 22:53:57.617  INFO 18468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:53:57.624  INFO 18468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:53:57.625  INFO 18468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:53:57.773  INFO 18468 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:53:57.786  INFO 18468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:53:57.787  INFO 18468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2023-07-23 22:53:58.217  INFO 18468 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:53:58.528  INFO 18468 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:53:58.839  INFO 18468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:53:58.926  INFO 18468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:53:58.943  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 2.601 seconds (JVM running for 3.061)
+2023-07-23 22:54:03.519  INFO 18468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 22:54:03.520  INFO 18468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 22:54:03.521  INFO 18468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-23 22:54:08.868  INFO 18468 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 22:54:09.080  INFO 18468 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 22:55:21.308  INFO 18468 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:55:21.316  INFO 18468 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:55:21.318  INFO 18468 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-23 22:55:21.325  WARN 18468 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [mssql-jdbc-shared-timer-core-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17.0.7/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:55:21.327  WARN 18468 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-07-23 22:55:21.333  INFO 18468 --- [Thread-5] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:55:21.333  INFO 18468 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-23 22:55:21.335  INFO 18468 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-23 22:55:21.415  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 18468 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:55:21.416  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:55:21.734  INFO 18468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:55:21.737  INFO 18468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:55:21.739  INFO 18468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:55:21.899  INFO 18468 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:55:21.903  INFO 18468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:55:21.904  INFO 18468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 484 ms
+2023-07-23 22:55:22.097  INFO 18468 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:55:22.183  INFO 18468 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:55:22.298  INFO 18468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:55:22.327  INFO 18468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:55:22.335  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.963 seconds (JVM running for 86.453)
+2023-07-23 22:55:22.340  INFO 18468 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-23 22:55:23.720  INFO 18468 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-23 22:55:23.725  INFO 18468 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-23 22:55:23.731  INFO 18468 --- [Thread-7] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:55:23.806  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Starting LingvoApplication using Java 17.0.7 on Castlebell with PID 18468 (D:\Project\spring boot\lingvo\bin\main started by castl in D:\Project\spring boot\lingvo)
+2023-07-23 22:55:23.807  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-07-23 22:55:24.024  INFO 18468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-23 22:55:24.025  INFO 18468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 22:55:24.026  INFO 18468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-07-23 22:55:24.104  INFO 18468 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-07-23 22:55:24.108  INFO 18468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 22:55:24.108  INFO 18468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 298 ms
+2023-07-23 22:55:24.195  INFO 18468 --- [restartedMain] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2023-07-23 22:55:24.241  INFO 18468 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-07-23 22:55:24.321  INFO 18468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 22:55:24.341  INFO 18468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-23 22:55:24.346  INFO 18468 --- [restartedMain] com.castlebell.lingvo.LingvoApplication  : Started LingvoApplication in 0.579 seconds (JVM running for 88.463)
+2023-07-23 22:55:24.350  INFO 18468 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

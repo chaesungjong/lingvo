@@ -34,7 +34,7 @@ public interface WorkService {
      * @param request
      * @return
      */
-    WorkSafetyCheck checkSurvey(HttpSession session, HttpServletRequest request,String gubun,String WorkGubu);
+    WorkSafetyCheck checkSurvey(HttpSession session, HttpServletRequest request,String gubun,String WorkGubun);
     
 
 }

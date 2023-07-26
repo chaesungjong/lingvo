@@ -92,6 +92,15 @@ function openQRCode(url){
     window.HyBridApp.callQRCode(url);
   }
   catch(e){
-
+    resultQRCode('QR_0000001',url);
   }
+}
+
+/**
+ * QR 코드 결과
+ * @param {*} qrCode 
+ * @param {*} url 
+ */
+function resultQRCode(qrCode,url){
+  location.href = url+"?qrCode="+qrCode;
 }

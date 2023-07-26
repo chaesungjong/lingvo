@@ -14,21 +14,11 @@
   </div>
 </div>
 <div class="col-sm-6 col-lg-4 mb-4" id="workStart">
-  <a href="javascript:openQRCode('/work/workQRConfirm');" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+  <a href="javascript:void(0);" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
     <img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
     <div class="d-flex gap-2 w-100 justify-content-between">
       <div>
         <h6 class="mb-0">금일 작업 시작</h6>
-      </div>
-    </div>
-  </a>
-</div>
-<div class="col-sm-6 col-lg-4 mb-4" id="workStart">
-  <a href="/work/workQRConfirm?qrCode=QR_0000001" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-    <img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-    <div class="d-flex gap-2 w-100 justify-content-between">
-      <div>
-        <h6 class="mb-0">금일 작업 시작(모바일웹)</h6>
       </div>
     </div>
   </a>

@@ -9,8 +9,3 @@ $(document).ready(function() {
     });
 
 });
-
-
-function nativeARSCall() {
-  ajaxRequest("","",function(){},function(){});
-}

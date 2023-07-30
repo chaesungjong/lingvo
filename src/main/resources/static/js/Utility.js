@@ -104,3 +104,25 @@ function openQRCode(url){
 function resultQRCode(qrCode,url){
   location.href = url+"?qrCode="+qrCode;
 }
+
+/**
+ * 사진 보내기
+ */
+function callCamera(imageDiv){
+  try{
+    window.HyBridApp.callCamera(imageDiv);
+  }
+  catch(e){
+    //resultQRCode('QR_0000001',url);
+  }
+}
+
+/**
+ * 사진 결과 
+ * @param {*} 이미지 
+ * @param {*} 이미지 표시할 div
+ */
+function resultPicture(base64Data,imageDiv){
+  var imageDiv = document.getElementById(imageDiv);
+  imageDiv.style.backgroundImage = "url(" + base64Data + ")";
+}

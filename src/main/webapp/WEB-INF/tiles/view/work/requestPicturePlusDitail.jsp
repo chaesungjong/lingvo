@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <style>
   .table {
       border: 1px solid #dee2e6;
@@ -16,16 +17,20 @@
   <table class="table">
       <tbody>
         <tr>
+          <th scope="row">위치</th>
+          <td>${location}</td>
+      </tr>
+        <tr>
             <th scope="row">현장</th>
-            <td>A아파트</td>
+            <td>${siteName}</td>
         </tr>
         <tr>
             <th scope="row">요청자</th>
-            <td>홍길동</td>
+            <td>${name}</td>
         </tr>
         <tr>
             <th scope="row">작업중지<br>요청사유</th>
-            <td>낙하물 방지망 파손</td>
+            <td id="requestWork"></td>
         </tr>
         <tr>
             <th scope="row">사진</th>
@@ -43,4 +48,6 @@
     $("#next").click(function() {
         location.href = "/work/requestPictureComfirm";
     });
+
+    $("#requestWork").text(localStorage.getItem("issue"));
 </script>

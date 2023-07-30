@@ -36,7 +36,7 @@ public class MemberController extends CommonController{
 	 */
     @RequestMapping(value = "/login", method=RequestMethod.GET)
 	public String loginLayout() {
-		logger.info("loginPage 진입");
+		logger.debug("loginPage 진입");
 	    return "mmb/login";
 	}
 

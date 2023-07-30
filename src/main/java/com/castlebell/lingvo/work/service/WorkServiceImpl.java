@@ -1,5 +1,6 @@
 package com.castlebell.lingvo.work.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +12,7 @@ import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
 import com.castlebell.lingvo.work.dao.WorkMapper;
 import com.castlebell.lingvo.work.dao.domain.request.WorkClassMsgListRequest;
 import com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse;
+import com.castlebell.lingvo.work.dao.domain.response.workIssueMsgListResponse;
 
 @Service
 public class WorkServiceImpl implements WorkService{
@@ -61,18 +63,23 @@ public class WorkServiceImpl implements WorkService{
         Member member = (Member) session.getAttribute("member");
         WorkSafetyCheck workSafetyCheck = (WorkSafetyCheck) session.getAttribute("WorkSafetyCheck");
 
-        String ip = request.getRemoteAddr();
-        String userid = member.getUserid();
+        String ip = request.getRemoteAddr();                    // 접속자 IP
+        String userid = member.getUserid();                     // 접속자 ID
 
-        workSafetyCheck.setGubun(gubun);
+        workSafetyCheck.setGubun(gubun);                        // QR_CHECKIN
         workSafetyCheck.setWorkGubun(WorkGubun);
         workSafetyCheck.setWorkClass("");
         workSafetyCheck.setIp(ip);
         workSafetyCheck.setUserid(userid);
         workSafetyCheck = workMapper.workSafetyCheck(workSafetyCheck);
-        session.setAttribute("WorkSafetyCheck", workSafetyCheck);
         
         return workSafetyCheck;
+    }
+
+
+    @Override
+    public List<workIssueMsgListResponse> workIssueMsgList(HashMap<String, String> map) {
+        return workMapper.getWorkIssueMsgList(map);
     }
     
 }

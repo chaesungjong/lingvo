@@ -1,5 +1,6 @@
 package com.castlebell.lingvo.work.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
 import com.castlebell.lingvo.work.dao.domain.request.WorkClassMsgListRequest;
 import com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse;
+import com.castlebell.lingvo.work.dao.domain.response.workIssueMsgListResponse;
 
 public interface WorkService {
 
@@ -35,6 +37,13 @@ public interface WorkService {
      * @return
      */
     WorkSafetyCheck checkSurvey(HttpSession session, HttpServletRequest request,String gubun,String WorkGubun);
+
+    /**
+     * 작업중지 상황별 메시지 리스트 
+     * @param HashMap
+     * @return
+     */
+    List<workIssueMsgListResponse> workIssueMsgList(HashMap<String, String> map);
     
 
 }

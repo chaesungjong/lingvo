@@ -10,8 +10,10 @@ import javax.servlet.http.HttpSession;
 import com.castlebell.lingvo.cmm.CommonController;
 import com.castlebell.lingvo.cmm.domain.Member;
 import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
+import com.castlebell.lingvo.util.StringUtil;
 import com.castlebell.lingvo.work.dao.domain.request.WorkClassMsgListRequest;
 import com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse;
+import com.castlebell.lingvo.work.dao.domain.response.workIssueMsgListResponse;
 import com.castlebell.lingvo.work.service.WorkService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -68,6 +70,7 @@ public class WorkController extends CommonController{
 
 		WorkSafetyCheck result = workService.getSiteInfo(session, request);
 
+		// 프로시저 호출 에러 시 메인으로 이동
 		if(!"0".equals(result.getErrCode())){
 			model.addAttribute("errMsg", result.getErrMsg());
 			return "redirect:/work/main";
@@ -78,7 +81,7 @@ public class WorkController extends CommonController{
 		model.addAttribute("constName", result.getConstName());	 	//시공사
 		model.addAttribute("companyName", result.getCompanyName());	//시공사
 		model.addAttribute("workType", result.getWorkType());			//작업구분
-		session.setAttribute("WorkSafetyCheck", result);
+		session.setAttribute("WorkSafetyCheck", result);						//작업정보 세션 저장
 
 	    return "work/workQRConfirm";
 	}
@@ -118,10 +121,11 @@ public class WorkController extends CommonController{
 	public String workCheckStepConfirm(HttpServletRequest request, Model model ,HttpSession session) {
 
 		logger.debug("workCheckStepConfirm 진입 ");
+
 		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
 
-		String workGubun = request.getParameter("workGubun");
-
+		String workGubun = StringUtil.objectToString(request.getParameter("workGubun"));
+		// 안전점검 매뉴얼 완료/결과전송확인
 		WorkSafetyCheck result = workService.checkSurvey(session, request,"SURVEY_END",workGubun);
 
 		if(result.getErrCode() != null && !"0".equals(result.getErrCode())){
@@ -228,7 +232,11 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/requestStopWorkList", method=RequestMethod.GET)
-	public String requestStopWorkList() {
+	public String requestStopWorkList(HttpServletRequest request, Model model ,HttpSession session) {
+		logger.debug("requestStopWorkList 진입 ");
+
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
+		
 	    return "work/requestStopWorkList";
 	}
 
@@ -237,9 +245,52 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/environmentalissues", method=RequestMethod.GET)
-	public String environmentalissues() {
+	public String environmentalissues(HttpServletRequest request, Model model ,HttpSession session) {
+
+		
+		logger.debug("environmentalissues 진입 ");
+
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
+
+		String issueGubun  = StringUtil.objectToString(request.getParameter("issueGubun"));
+		String etcParam1   = StringUtil.objectToString(request.getParameter("etcParam1"));
+
+		HashMap<String, String> map = new HashMap<>();
+		map.get(map.put("issueGubun", issueGubun));
+		map.get(map.put("etcParam1", etcParam1));
+
+		List<workIssueMsgListResponse> result = workService.workIssueMsgList(map);
+
+		if(result != null || !result.isEmpty()) 
+			model.addAttribute("result", result);			//작업중지 상황별 메시지 리스트
+
 	    return "work/environmentalissues";
 	}
+
+	/**
+	 * 작업 중지 요청 사진 첨부 상세 내용
+	 * @return
+	 */   
+    @RequestMapping(value = "/requestPicturePlusDitail", method=RequestMethod.GET)
+	public String requestPicturePlusDitail(HttpServletRequest request, Model model ,HttpSession session) {
+
+		logger.debug("requestPicturePlusDitail 진입 ");
+		WorkSafetyCheck workSafetyCheck =(WorkSafetyCheck) session.getAttribute("WorkSafetyCheck");
+		Member member = (Member) session.getAttribute("member");
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
+
+		if(workSafetyCheck == null){
+			model.addAttribute("errMsg", "잘못 된 접근 입니다.");
+			return "redirect:/work/main";
+		}
+
+		model.addAttribute("name", member.getName());								//이름
+		model.addAttribute("siteName", workSafetyCheck.getSiteName());			//현장
+		model.addAttribute("location", workSafetyCheck.getSiteAddress());			//위치
+		
+	    return "work/requestPicturePlusDitail";
+	}
+
 
 	/**
 	 * 작업 중지 요청 사진 올리기 화면 
@@ -259,16 +310,6 @@ public class WorkController extends CommonController{
 	public String requestPicturePlus() {
 	    return "work/requestPicturePlus";
 	}
-
-	/**
-	 * 작업 중지 요청 사진 첨부 상세 내용
-	 * @return
-	 */   
-    @RequestMapping(value = "/requestPicturePlusDitail", method=RequestMethod.GET)
-	public String requestPicturePlusDitail() {
-	    return "work/requestPicturePlusDitail";
-	}
-
 	/**
 	 * 작업 중지 요청 완료
 	 * @return

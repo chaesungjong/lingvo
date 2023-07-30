@@ -4,8 +4,10 @@
     <typeAliases>
         <package name="com.castlebell.lingvo"/>
     </typeAliases>
-    <mappers>
+    <mappers> 
         <mapper resource="mybatis/xml/mapper/mmbMapper.xml"/>
         <mapper resource="mybatis/xml/mapper/WorkMapper.xml"/>
+        <mapper resource="mybatis/xml/mapper/boardMapper.xml"/>
+        <mapper resource="mybatis/xml/mapper/csMapper.xml"/>
     </mappers>
 </configuration>

@@ -14,6 +14,7 @@
     <result property="workType"          column="WORKTYPE" />
     <result property="workSeq"           column="WORKSEQ" />
   </resultMap>
+  
   <select id="workSafetyCheck" resultMap="workSafetyCheckMap"  statementType="CALLABLE">
         { call [dbo].[workSafetyCheck](
             #{gubun},
@@ -61,5 +62,19 @@
           )
         }
   </select>
+  
   <!-- 금일 작업시작하기, 예방활동체크 End -->
+  <resultMap id="workIssueMsgMap" type="com.castlebell.lingvo.work.dao.domain.response.workIssueMsgListResponse">
+    <result property="issueGubun"  column="issueGubun" />
+    <result property="issueTitle"  column="issueTitle" />
+    <result property="issueDetail" column="issueDetail" />
+    <result property="choice1"     column="choice1" />
+    <result property="choice2"     column="choice2" />
+  </resultMap>
+  <!-- 작업중지 상황별 메시지 리스트 Start -->
+  <select id="getWorkIssueMsgList" statementType="CALLABLE" resultMap="workIssueMsgMap" >
+    { call [dbo].[workIssueMsgList]( #{issueGubun}, #{etcParam1} ) }
+  </select>
+  <!-- 작업중지 상황별 메시지 리스트 End -->
+
 </mapper>

@@ -17,8 +17,6 @@ public class WorkSafetyCheck implements Serializable {
     private String etcParam1;
     private Integer retVal;
     private String errMsg;
-
-    // Additional parameters
     private String errCode;
     private String siteCode;
     private String siteName;

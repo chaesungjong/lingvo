@@ -10,9 +10,8 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="https://namu.wiki/jump/7bgDyzN6keqskoFaJaxq%2FZTEXnGPSrtTgv%2FIHzpkIW11YYpokeUrQskOCJTpNpkpp1emLDR7ob8uLCRSyZJ1dw%3D%3D" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>사용자 선택</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
+            <div id="imageDiv"></div>
+            <div class="card-body" id="addPicture">
               <div class="d-flex justify-content-between align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -31,9 +30,6 @@
         </div>
     </div>
 </div>
-<script>
-    $("#next").click(function() {
-        location.href = "/work/requestPicturePlusDitail";
-    });
-</script>
+<script src="/js/work/requestPicturePlus.js"></script>
+
 

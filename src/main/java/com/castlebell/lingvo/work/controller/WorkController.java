@@ -261,8 +261,7 @@ public class WorkController extends CommonController{
 
 		List<workIssueMsgListResponse> result = workService.workIssueMsgList(map);
 
-		if(result != null || !result.isEmpty()) 
-			model.addAttribute("result", result);			//작업중지 상황별 메시지 리스트
+		if(result != null || !result.isEmpty()) model.addAttribute("result", result);			//작업중지 상황별 메시지 리스트
 
 	    return "work/environmentalissues";
 	}
@@ -324,7 +323,17 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/workReview", method=RequestMethod.GET)
-	public String workReview() {
+	public String workReview(HttpServletRequest request, Model model ,HttpSession session) {
+
+		WorkSafetyCheck workSafetyCheck =(WorkSafetyCheck) session.getAttribute("WorkSafetyCheck");
+		Member member = (Member) session.getAttribute("member");
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
+
+		if(workSafetyCheck == null){
+			model.addAttribute("errMsg", "현재 진행중인 작업이 없습니다. ");
+			return "redirect:/work/main";
+		}
+
 	    return "work/workReview";
 	}
 
@@ -333,7 +342,16 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/checkWorkReview", method=RequestMethod.GET)
-	public String checkWorkReview() {
+	public String checkWorkReview(HttpServletRequest request, Model model ,HttpSession session) {
+
+		WorkSafetyCheck workSafetyCheck =(WorkSafetyCheck) session.getAttribute("WorkSafetyCheck");
+		Member member = (Member) session.getAttribute("member");
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
+
+		if(workSafetyCheck == null){
+			model.addAttribute("errMsg", "현재 진행중인 작업이 없습니다. ");
+			return "redirect:/work/main";
+		}
 	    return "work/checkWorkReview";
 	}
 
@@ -356,13 +374,30 @@ public class WorkController extends CommonController{
 	public String workReviewEnd() {
 	    return "work/workReviewEnd";
 	}
-
-		/**
+	
+	/**
 	 * 작업 후기 개선 사항 요청 
 	 * @return
 	 */   
     @RequestMapping(value = "/workReviewissues", method=RequestMethod.GET)
-	public String workReviewissues() {
+	public String workReviewissues(HttpServletRequest request, Model model ,HttpSession session) {
+
+		logger.debug("workReviewissues 진입 ");
+
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
+
+		String issueGubun  = StringUtil.objectToString(request.getParameter("issueGubun"));
+		String etcParam1   = StringUtil.objectToString(request.getParameter("etcParam1"));
+
+		HashMap<String, String> map = new HashMap<>();
+		map.get(map.put("issueGubun", issueGubun));
+		map.get(map.put("etcParam1", etcParam1));
+
+		List<workIssueMsgListResponse> result = workService.workIssueMsgList(map);
+
+		if(result != null || !result.isEmpty()) model.addAttribute("result", result);			//작업중지 상황별 메시지 리스트
+
+
 	    return "work/workReviewissues";
 	}
 
@@ -372,7 +407,22 @@ public class WorkController extends CommonController{
 	 * @return
 	 */   
     @RequestMapping(value = "/workImprovementReview", method=RequestMethod.GET)
-	public String workImprovementReview() {
+	public String workImprovementReview(HttpServletRequest request, Model model ,HttpSession session) {
+
+		logger.debug("workImprovementReview 진입 ");
+
+		if(!checkLogin(session, model)){ return "redirect:/mmb/login"; }
+
+		String issueGubun  = StringUtil.objectToString(request.getParameter("issueGubun"));
+		String etcParam1   = StringUtil.objectToString(request.getParameter("etcParam1"));
+
+		HashMap<String, String> map = new HashMap<>();
+		map.get(map.put("issueGubun", issueGubun));
+		map.get(map.put("etcParam1", etcParam1));
+
+		List<workIssueMsgListResponse> result = workService.workIssueMsgList(map);
+
+		if(result != null || !result.isEmpty()) model.addAttribute("result", result);			//작업중지 상황별 메시지 리스트
 	    return "work/workImprovementReview";
 	}
 }

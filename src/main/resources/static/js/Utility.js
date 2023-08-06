@@ -113,7 +113,16 @@ function callCamera(imageDiv){
     window.HyBridApp.callCamera(imageDiv);
   }
   catch(e){
-    //resultQRCode('QR_0000001',url);
+
+  }
+}
+
+function callGallery(imageDiv){
+  try{
+    window.HyBridApp.callGallery(imageDiv);
+  }
+  catch(e){
+    
   }
 }
 
@@ -122,7 +131,6 @@ function callCamera(imageDiv){
  * @param {*} 이미지 
  * @param {*} 이미지 표시할 div
  */
-function resultPicture(base64Data,imageDiv){
-  var imageDiv = document.getElementById(imageDiv);
-  imageDiv.style.backgroundImage = "url(" + base64Data + ")";
+function resultPicture(imgUrl,imageDiv){
+  $("#"+imageDiv).attr("src", imgUrl);
 }

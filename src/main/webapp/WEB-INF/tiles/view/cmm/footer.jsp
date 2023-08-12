@@ -47,6 +47,6 @@
 
 <nav id="navbar" class="navbar fixed-bottom navbar-expand-sm navbar-dark">
   <a href="/cs/emrContact"      class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">contact_page</span></a>
-  <a href="/work/main"          class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">home</span></a>
+  <a href="/work/worker/main"          class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">home</span></a>
   <a href="/board/noticeBoard?Gubun=Notice"     class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home"><span class="material-symbols-outlined">warning</span></a>
 </nav>

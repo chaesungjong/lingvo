@@ -10,9 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import com.castlebell.lingvo.cmm.session.WorkSafetyCheck;
 import com.castlebell.lingvo.cs.dao.domain.responese.EmergencyInfo;
 import com.castlebell.lingvo.cs.service.CustomerServiceCenterService;
-import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
 
 /*
  * 고객센터
@@ -35,14 +36,15 @@ public class CustomerServiceCenterController {
      * @return
      */
     @RequestMapping(value = "/emrContact", method=RequestMethod.GET)
-	public String emrContact(HttpServletRequest request, 	Model model ,HttpSession session) {
+	public String emrContact(HttpServletRequest request, Model model ,HttpSession session, RedirectAttributes redirectAttributes) {
         
         logger.debug("emrContact 진입");
 
         WorkSafetyCheck workSafetyCheck = (WorkSafetyCheck) session.getAttribute("WorkSafetyCheck");
 
         if(workSafetyCheck == null){
-            return "redirect:/work/main";
+			redirectAttributes.addAttribute("errMsg", "금일 작업 시작을 해주세요.");
+            return "redirect:/work/worker/main";
         }
 
 		List<EmergencyInfo> list = customerServiceCenterService.getEmergencyContactList(session,workSafetyCheck.getQrCode());

@@ -7,8 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.castlebell.lingvo.cmm.domain.Member;
-import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
+
+import com.castlebell.lingvo.cmm.session.Member;
+import com.castlebell.lingvo.cmm.session.WorkSafetyCheck;
 import com.castlebell.lingvo.work.dao.WorkMapper;
 import com.castlebell.lingvo.work.dao.domain.request.WorkClassMsgListRequest;
 import com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse;

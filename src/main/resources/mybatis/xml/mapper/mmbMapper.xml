@@ -8,7 +8,7 @@
   </select>
   <!-- 로그인 시도 프로시저 End -->
   <!-- 회원정보 가져오기 및 중복확인  프로시저 Start -->
-  <resultMap id="MemberResultMap" type="com.castlebell.lingvo.cmm.domain.Member">
+  <resultMap id="MemberResultMap" type="com.castlebell.lingvo.cmm.session.Member">
     <result property="userid"           column="userid" />
     <result property="userkey"          column="userkey" />
     <result property="pwd"              column="pwd" />

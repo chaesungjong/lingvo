@@ -4,7 +4,7 @@
 <mapper namespace="com.castlebell.lingvo.work.dao.WorkMapper">
 
   <!-- 금일 작업시작하기, 예방활동체크 Start -->
-  <resultMap id="workSafetyCheckMap" type="com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck">
+  <resultMap id="workSafetyCheckMap" type="com.castlebell.lingvo.cmm.session.WorkSafetyCheck">
     <result property="errCode"           column="ERRCODE" />
     <result property="siteCode"          column="SITECODE" />
     <result property="siteName"          column="SITENAME" />
@@ -12,7 +12,7 @@
     <result property="constName"         column="CONSTNAME" />
     <result property="companyName"       column="COMPANYNAME" />
     <result property="workType"          column="WORKTYPE" />
-    <result property="workSeq"           column="WORKSEQ" />
+    <result property="qrCode"           column="QRCODE" />
   </resultMap>
   
   <select id="workSafetyCheck" resultMap="workSafetyCheckMap"  statementType="CALLABLE">

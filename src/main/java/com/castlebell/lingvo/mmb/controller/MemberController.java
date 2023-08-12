@@ -76,7 +76,7 @@ public class MemberController extends CommonController{
 			return "mmb/login";
 		}
 		
-	    return "redirect:/work/main";
+	    return "redirect:/work/worker/main";
 		
 	}
 

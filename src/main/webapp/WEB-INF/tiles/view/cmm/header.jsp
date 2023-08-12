@@ -43,7 +43,7 @@
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="topnav">
-  <a href="/work/main" class="active"><span class="me-2"><img src="/image/lingvo.svg" ></span>Lingvo</a>
+  <a href="/work/worker/main" class="active"><span class="me-2"><img src="/image/lingvo.svg" ></span>Lingvo</a>
   <div id="myLinks">
     <a href="javascript:void(0);" onclick="CustomAlert();" >메인</a>
     <a href="javascript:void(0);" onclick="CustomAlert();"  class="navitem">금일 작업 시작</a>

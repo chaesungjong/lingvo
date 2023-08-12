@@ -3,7 +3,8 @@ package com.castlebell.lingvo.work.dao;
 import java.util.HashMap;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
-import com.castlebell.lingvo.domain.dao.work.WorkSafetyCheck;
+
+import com.castlebell.lingvo.cmm.session.WorkSafetyCheck;
 import com.castlebell.lingvo.work.dao.domain.request.WorkClassMsgListRequest;
 import com.castlebell.lingvo.work.dao.domain.response.WorkClassMsgListResponse;
 import com.castlebell.lingvo.work.dao.domain.response.workIssueMsgListResponse;

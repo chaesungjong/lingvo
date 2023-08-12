@@ -2,7 +2,8 @@ package com.castlebell.lingvo.mmb.dao;
 
 import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
-import com.castlebell.lingvo.cmm.domain.Member;
+
+import com.castlebell.lingvo.cmm.session.Member;
 import com.castlebell.lingvo.mmb.dao.domain.request.RequestLogin;
 
 /**

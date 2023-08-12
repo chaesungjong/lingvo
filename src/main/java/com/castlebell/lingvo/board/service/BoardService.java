@@ -1,7 +1,6 @@
 package com.castlebell.lingvo.board.service;
 
 import java.util.List;
-
 import com.castlebell.lingvo.board.dao.domain.request.NewsFilter;
 import com.castlebell.lingvo.board.dao.domain.response.Board;
 

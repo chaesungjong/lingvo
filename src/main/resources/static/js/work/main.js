@@ -10,7 +10,7 @@ $(document).ready(function() {
      * 금일 작업 시작 버튼 클릭 
      */
     $("#workStart").click(function() {
-        openQRCode('/work/workQRConfirm');
+        openQRCode('/work/worker/start/workQRConfirm');
     });
       
 

@@ -105,32 +105,34 @@ function resultQRCode(qrCode,url){
   location.href = url+"?qrCode="+qrCode;
 }
 
+
 /**
- * 사진 보내기
+ * 사진 추가 콜백 함수
  */
-function callCamera(imageDiv){
+var addPictureCallback = null;
+/**
+ * 사진 찍기 
+ * @param {*} callback 콜백 함수
+ */
+function callCamera(callback){
   try{
-    window.HyBridApp.callCamera(imageDiv);
+    addPictureCallback = callback;
+    window.HyBridApp.callCamera();
   }
   catch(e){
 
   }
 }
 
-function callGallery(imageDiv){
+/**
+ * 갤러리에서 사진 가져오기
+ * @param {*} callback 
+ */
+function callGallery(callback){
   try{
-    window.HyBridApp.callGallery(imageDiv);
-  }
-  catch(e){
+    addPictureCallback = callback;
+    window.HyBridApp.callGallery();
+  }catch(e){
     
   }
-}
-
-/**
- * 사진 결과 
- * @param {*} 이미지 
- * @param {*} 이미지 표시할 div
- */
-function resultPicture(imgUrl,imageDiv){
-  $("#"+imageDiv).attr("src", imgUrl);
 }
